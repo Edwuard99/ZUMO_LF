@@ -88,7 +88,9 @@
       <PathName>C:\Users\Edward\workspace\ZUMO_LF\Project_Settings\Startup_Code\__arm_end.c</PathName>
       <PathName>C:\Users\Edward\workspace\ZUMO_LF\Project_Settings\Startup_Code\__arm_start.c</PathName>
       <PathName>C:\Users\Edward\workspace\ZUMO_LF\Sources\Events.c</PathName>
+      <PathName>C:\Users\Edward\workspace\ZUMO_LF\Sources\PID.c</PathName>
       <PathName>C:\Users\Edward\workspace\ZUMO_LF\Sources\ProcessorExpert.c</PathName>
+      <PathName>C:\Users\Edward\workspace\ZUMO_LF\Sources\ZumoMotors.c</PathName>
       <PathName>C:\Users\Edward\workspace\ZUMO_LF\Sources\ZumoSensors.c</PathName>
       <PathName>C:\Users\Edward\workspace\ZUMO_LF\Sources\sa_mtb.c</PathName>
     </GeneratedCs>

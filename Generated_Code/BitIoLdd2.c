@@ -6,7 +6,7 @@
 **     Component   : BitIO_LDD
 **     Version     : Component 01.033, Driver 01.03, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-05-06, 11:46, # CodeGen: 42
+**     Date/Time   : 2015-05-17, 19:34, # CodeGen: 65
 **     Abstract    :
 **         The HAL BitIO component provides a low level API for unified
 **         access to general purpose digital input/output pins across
@@ -25,12 +25,13 @@
 **            Auto initialization                          : yes
 **          Safe mode                                      : yes
 **     Contents    :
-**         Init   - LDD_TDeviceData* BitIoLdd2_Init(LDD_TUserData *UserDataPtr);
-**         SetDir - void BitIoLdd2_SetDir(LDD_TDeviceData *DeviceDataPtr, bool Dir);
-**         GetVal - bool BitIoLdd2_GetVal(LDD_TDeviceData *DeviceDataPtr);
-**         PutVal - void BitIoLdd2_PutVal(LDD_TDeviceData *DeviceDataPtr, bool Val);
-**         ClrVal - void BitIoLdd2_ClrVal(LDD_TDeviceData *DeviceDataPtr);
-**         SetVal - void BitIoLdd2_SetVal(LDD_TDeviceData *DeviceDataPtr);
+**         Init      - LDD_TDeviceData* BitIoLdd2_Init(LDD_TUserData *UserDataPtr);
+**         SetDir    - void BitIoLdd2_SetDir(LDD_TDeviceData *DeviceDataPtr, bool Dir);
+**         SetOutput - void BitIoLdd2_SetOutput(LDD_TDeviceData *DeviceDataPtr);
+**         GetVal    - bool BitIoLdd2_GetVal(LDD_TDeviceData *DeviceDataPtr);
+**         PutVal    - void BitIoLdd2_PutVal(LDD_TDeviceData *DeviceDataPtr, bool Val);
+**         ClrVal    - void BitIoLdd2_ClrVal(LDD_TDeviceData *DeviceDataPtr);
+**         SetVal    - void BitIoLdd2_SetVal(LDD_TDeviceData *DeviceDataPtr);
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -171,6 +172,25 @@ void BitIoLdd2_SetDir(LDD_TDeviceData *DeviceDataPtr, bool Dir)
     /* Input */
     GPIO_PDD_SetPortInputDirectionMask(BitIoLdd2_MODULE_BASE_ADDRESS, BitIoLdd2_PORT_MASK);
   }
+}
+
+/*
+** ===================================================================
+**     Method      :  BitIoLdd2_SetOutput (component BitIO_LDD)
+*/
+/*!
+**     @brief
+**         Sets a pin direction to output (available only if the
+**         direction = _[input/output]_).
+**     @param
+**         DeviceDataPtr   - Device data structure
+**                           pointer returned by <Init> method.
+*/
+/* ===================================================================*/
+void BitIoLdd2_SetOutput(LDD_TDeviceData *DeviceDataPtr)
+{
+  (void)DeviceDataPtr;                 /* Parameter is not used, suppress unused argument warning */
+  GPIO_PDD_SetPortOutputDirectionMask(BitIoLdd2_MODULE_BASE_ADDRESS, BitIoLdd2_PORT_MASK);
 }
 
 /*

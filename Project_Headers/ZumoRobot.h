@@ -2,6 +2,7 @@
 #define ZUMOROBOT_H
 
 #include "Cpu.h"
+#include "Cpu.h"
 #include "Events.h"
 #include "WAIT1.h"
 #include "sens_dreapta.h"
@@ -35,21 +36,22 @@
 #include "Button.h"
 #include "BitIoLdd11.h"
 #include "PullUpButton.h"
+#include "PE_Types.h"
+
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
 #include "IO_Map.h"
+#include "IO_Map.h"
 
 
 struct sensor{
-	int value;
-	int dist;
+	int64_t value;
+	int64_t dist;
 };
 
-void irSensors(struct sensor s[6]);
-void takeAvg(int min_avg[6], int max_avg[6]);
-void calibrate(int min_avg[6], int max_avg[6], struct sensor s[6]);
-void readSensors(int min_avg[6], int max_avg[6], struct sensor s[6]);
+void readSensors(struct sensor s[6]);
+void motor(int x, int y);
 
 #endif

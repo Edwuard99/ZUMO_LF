@@ -454,7 +454,7 @@ PE_DEBUGHALT();
           <GetDir v="don&amp;apos;t generate code" />
           <SetDir v="generate code" />
           <SetInput v="don&amp;apos;t generate code" />
-          <SetOutput v="don&amp;apos;t generate code" />
+          <SetOutput v="generate code" />
           <GetVal v="generate code" />
           <PutVal v="generate code" />
           <ClrVal v="generate code" />
@@ -479,7 +479,7 @@ PE_DEBUGHALT();
       <GetDir v="don&amp;apos;t generate code" />
       <SetDir v="generate code" />
       <SetInput v="don&amp;apos;t generate code" />
-      <SetOutput v="don&amp;apos;t generate code" />
+      <SetOutput v="generate code" />
       <GetVal v="generate code" />
       <PutVal v="generate code" />
       <ClrVal v="generate code" />
@@ -517,7 +517,7 @@ PE_DEBUGHALT();
           <GetDir v="don&amp;apos;t generate code" />
           <SetDir v="generate code" />
           <SetInput v="don&amp;apos;t generate code" />
-          <SetOutput v="don&amp;apos;t generate code" />
+          <SetOutput v="generate code" />
           <GetVal v="generate code" />
           <PutVal v="generate code" />
           <ClrVal v="generate code" />
@@ -542,7 +542,7 @@ PE_DEBUGHALT();
       <GetDir v="don&amp;apos;t generate code" />
       <SetDir v="generate code" />
       <SetInput v="don&amp;apos;t generate code" />
-      <SetOutput v="don&amp;apos;t generate code" />
+      <SetOutput v="generate code" />
       <GetVal v="generate code" />
       <PutVal v="generate code" />
       <ClrVal v="generate code" />

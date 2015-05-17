@@ -27,7 +27,7 @@
 /* MODULE ProcessorExpert */
 
 /* Including needed modules to compile this module/procedure */
-/*#include "Cpu.h"
+#include "Cpu.h"
 #include "Cpu.h"
 #include "Events.h"
 #include "WAIT1.h"
@@ -65,11 +65,11 @@
 #include "PE_Types.h"
 
 /* Including shared modules, which are used for whole project */
-/*#include "PE_Types.h"
+#include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
 #include "IO_Map.h"
-#include "IO_Map.h"*/
+#include "IO_Map.h"
 
 #include "ZumoRobot.h"
 
@@ -80,16 +80,33 @@ int main(void)
 {
   /* Write your local variable definition here */
 	struct sensor s[6];
-	int min_avg[6], max_avg[6];
+
+	int64_t min_avg[6], max_avg[6];
+	int i;
+	
 
   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
   PE_low_level_init();
   /*** End of Processor Expert internal initialization.                    ***/
 
   /* Write your code here */
-  takeAvg(min_avg, max_avg);
-  readSensors(min_avg, max_avg, s);
+  CountTimer_Init((LDD_TUserData *)NULL);
   
+
+  
+
+  while(1){
+	  readSensors(s);
+	  for(i=0; i<6; i++){
+		  Term1_SendNum(s[0].value);
+		  Term1_SendStr("  ");
+	  }
+	  Term1_SendChar('\n');
+	  Term1_SendChar('\r');
+	  	  
+	  
+  }
+
 
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/

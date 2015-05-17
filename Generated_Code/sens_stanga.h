@@ -6,7 +6,7 @@
 **     Component   : BitIO
 **     Version     : Component 02.086, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-05-06, 11:46, # CodeGen: 42
+**     Date/Time   : 2015-05-17, 19:34, # CodeGen: 65
 **     Abstract    :
 **         This component "BitIO" implements an one-bit input/output.
 **         It uses one bit/pin of a port.
@@ -35,11 +35,12 @@
 **
 **         Optimization for            : speed
 **     Contents    :
-**         SetDir - void sens_stanga_SetDir(bool Dir);
-**         GetVal - bool sens_stanga_GetVal(void);
-**         PutVal - void sens_stanga_PutVal(bool Val);
-**         ClrVal - void sens_stanga_ClrVal(void);
-**         SetVal - void sens_stanga_SetVal(void);
+**         SetDir    - void sens_stanga_SetDir(bool Dir);
+**         SetOutput - void sens_stanga_SetOutput(void);
+**         GetVal    - bool sens_stanga_GetVal(void);
+**         PutVal    - void sens_stanga_PutVal(bool Val);
+**         ClrVal    - void sens_stanga_ClrVal(void);
+**         SetVal    - void sens_stanga_SetVal(void);
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -121,6 +122,17 @@ extern "C" {
 ** ===================================================================
 */
 #define sens_stanga_SetDir(Dir) (BitIoLdd3_SetDir(BitIoLdd3_DeviceData, (Dir)))
+
+/*
+** ===================================================================
+**     Method      :  sens_stanga_SetOutput (component BitIO)
+**     Description :
+**         This method sets direction of the component to output.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+#define sens_stanga_SetOutput() (BitIoLdd3_SetOutput(BitIoLdd3_DeviceData))
 
 /*
 ** ===================================================================

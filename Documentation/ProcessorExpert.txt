@@ -17,6 +17,7 @@ Module "WAIT1"     (component Wait)
 
 Module "sens_dreapta" (component BitIO)
    - sens_dreapta_SetDir -Sets a pin direction (available only if the direction = _[input/output]_).
+   - sens_dreapta_SetOutput -Sets a pin direction to output (available only if the direction = _[input/output]_).
    - sens_dreapta_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read 
                 and returned. If the direction is [output] then the last written value is returned (see <Safe mode> property 
                 for limitations). This method cannot be disabled if direction is [input].
@@ -31,6 +32,7 @@ Module "sens_dreapta" (component BitIO)
 
 Module "sens_stanga" (component BitIO)
    - sens_stanga_SetDir -Sets a pin direction (available only if the direction = _[input/output]_).
+   - sens_stanga_SetOutput -Sets a pin direction to output (available only if the direction = _[input/output]_).
    - sens_stanga_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read 
                 and returned. If the direction is [output] then the last written value is returned (see <Safe mode> property 
                 for limitations). This method cannot be disabled if direction is [input].

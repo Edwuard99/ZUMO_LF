@@ -6,7 +6,7 @@
 **     Component   : BitIO
 **     Version     : Component 02.086, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-05-06, 11:46, # CodeGen: 42
+**     Date/Time   : 2015-05-17, 19:34, # CodeGen: 65
 **     Abstract    :
 **         This component "BitIO" implements an one-bit input/output.
 **         It uses one bit/pin of a port.
@@ -35,11 +35,12 @@
 **
 **         Optimization for            : speed
 **     Contents    :
-**         SetDir - void sens_dreapta_SetDir(bool Dir);
-**         GetVal - bool sens_dreapta_GetVal(void);
-**         PutVal - void sens_dreapta_PutVal(bool Val);
-**         ClrVal - void sens_dreapta_ClrVal(void);
-**         SetVal - void sens_dreapta_SetVal(void);
+**         SetDir    - void sens_dreapta_SetDir(bool Dir);
+**         SetOutput - void sens_dreapta_SetOutput(void);
+**         GetVal    - bool sens_dreapta_GetVal(void);
+**         PutVal    - void sens_dreapta_PutVal(bool Val);
+**         ClrVal    - void sens_dreapta_ClrVal(void);
+**         SetVal    - void sens_dreapta_SetVal(void);
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -108,6 +109,21 @@ extern "C" {
 */
 /*
 void sens_dreapta_SetDir(bool Dir)
+
+**  This method is implemented as a macro. See sens_dreapta.h file.  **
+*/
+
+/*
+** ===================================================================
+**     Method      :  sens_dreapta_SetOutput (component BitIO)
+**     Description :
+**         This method sets direction of the component to output.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+/*
+void sens_dreapta_SetOutput(void)
 
 **  This method is implemented as a macro. See sens_dreapta.h file.  **
 */
