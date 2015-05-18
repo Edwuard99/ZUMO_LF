@@ -1,7 +1,7 @@
 #include "ZumoRobot.h"
 
 
-void readSensors(struct sensor s[6]){
+void irSensors(struct sensor s[6]){
 	int64_t a=1,b=1,c=1,d=1,e=1,f=1;
 	int64_t i;
 	int64_t x;
@@ -66,17 +66,119 @@ void readSensors(struct sensor s[6]){
 		if(f)
 			s[5].value=CountTimer_GetCounterValue((LDD_TDeviceData *)NULL);
 
-		if(x>70)
+		if(x>3000)
 			break;
 
 	}
 
+}
+
+void takeAvg(int64_t min_avg[6], int64_t max_avg[6]){
+	int64_t x=1,i;
+	struct sensor s[6];
 	for(i=0; i<6; i++){
-			if(s[i].value>=35)
-				s[i].value=1;
-			else
-				s[i].value=0;
+		min_avg[i]=0;
+		max_avg[i]=0;
 	}
+	while(x){
+		x=Button_GetVal();
+	}
+	WAIT1_Waitms(500);
+	//LED_Orange_On();
+	for(i=0; i<1000; i++){
+		irSensors(s);
+		min_avg[0]+=s[0].value;
+		min_avg[1]+=s[1].value;
+		min_avg[2]+=s[2].value;
+		min_avg[3]+=s[3].value;
+		min_avg[4]+=s[4].value;
+		min_avg[5]+=s[5].value;
+	}
+	min_avg[0]/=1000;
+	min_avg[1]/=1000;
+	min_avg[2]/=1000;
+	min_avg[3]/=1000;
+	min_avg[4]/=1000;
+	min_avg[5]/=1000;
+
+	x=1;
+	
+	Term1_SendStr("White");
+	
+	//LED_Orange_Off();
+	while(x){
+		x=Button_GetVal();
+	}
+	WAIT1_Waitms(500);
+	//LED_Orange_On();
+	for(i=0; i<1000; i++){
+		irSensors(s);
+		max_avg[0]+=s[0].value;
+		max_avg[1]+=s[1].value;
+		max_avg[2]+=s[2].value;
+		max_avg[3]+=s[3].value;
+		max_avg[4]+=s[4].value;
+		max_avg[5]+=s[5].value;
+	}
+
+	max_avg[0]/=1000;
+	max_avg[1]/=1000;
+	max_avg[2]/=1000;
+	max_avg[3]/=1000;
+	max_avg[4]/=1000;
+	max_avg[5]/=1000;
+
+	Term1_SendStr("Black");
+	Term1_SendChar('\n');
+	Term1_SendChar('\r');
+
+	Term1_SendNum(min_avg[0]);
+	Term1_SendStr("  ");
+	Term1_SendNum(min_avg[1]);
+	Term1_SendStr("  ");
+	Term1_SendNum(min_avg[2]);
+	Term1_SendStr("  ");
+	Term1_SendNum(min_avg[3]);
+	Term1_SendStr("  ");
+	Term1_SendNum(min_avg[4]);
+	Term1_SendStr("  ");
+	Term1_SendNum(min_avg[5]);
+	Term1_SendChar('\n');
+	Term1_SendChar('\r');
+	Term1_SendNum(max_avg[0]);
+	Term1_SendStr("  ");
+	Term1_SendNum(max_avg[1]);
+	Term1_SendStr("  ");
+	Term1_SendNum(max_avg[2]);
+	Term1_SendStr("  ");
+	Term1_SendNum(max_avg[3]);
+	Term1_SendStr("  ");
+	Term1_SendNum(max_avg[4]);
+	Term1_SendStr("  ");
+	Term1_SendNum(max_avg[5]);
+	Term1_SendChar('\n');
+	Term1_SendChar('\r');
 
 }
 
+void calibrate(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]){
+	s[0].value=100*(9*s[0].value+max_avg[0]-10*min_avg[0])/(max_avg[0]-min_avg[0]);
+	s[1].value=100*(9*s[1].value+max_avg[1]-10*min_avg[1])/(max_avg[1]-min_avg[1]);
+	s[2].value=100*(9*s[2].value+max_avg[2]-10*min_avg[2])/(max_avg[2]-min_avg[2]);
+	s[3].value=100*(9*s[3].value+max_avg[3]-10*min_avg[3])/(max_avg[3]-min_avg[3]);
+	s[4].value=100*(9*s[4].value+max_avg[4]-10*min_avg[4])/(max_avg[4]-min_avg[4]);
+	s[5].value=100*(9*s[5].value+max_avg[5]-10*min_avg[5])/(max_avg[5]-min_avg[5]);
+
+}
+
+void readSensors(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]){
+	int i;
+	irSensors(s);
+	calibrate(min_avg, max_avg, s);
+	for(i=0; i<6; i++){
+		if(s[i].value>145)
+			s[i].seen=1;
+		else 
+			s[i].seen=0;
+	}
+}

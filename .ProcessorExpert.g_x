@@ -17,7 +17,7 @@
       <File Name="Documentation/doxygen/PwmLdd1.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664111" FileType="45637" CompNumb="22" />
       <File Name="Generated_Code/PDD/USB_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
       <File Name="Generated_Code/PDD/PORT_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Documentation/ProcessorExpert_SIGNALS.txt" FileDate="2015-05-17, 20:39:04" FileAge="1431884344884" FileType="3072" />
+      <File Name="Documentation/ProcessorExpert_SIGNALS.txt" FileDate="2015-05-18, 12:28:58" FileAge="1431941338889" FileType="3072" />
       <File Name="Documentation/doxygen/CountTimer.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664104" FileType="45637" CompNumb="47" />
       <File Name="Generated_Code/PE_Const.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664453" FileType="45637" />
       <File Name="Documentation/doxygen/RoutingReport.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664117" FileType="45637" CompNumb="2" />
@@ -104,7 +104,7 @@
       <File Name="Documentation/doxygen/ProcessorExpert.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664105" FileType="45637" CompNumb="2" />
       <File Name="Documentation/doxygen/PullUpButton.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664108" FileType="45637" CompNumb="91" />
       <File Name="Generated_Code/IR_LED.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664443" FileType="45637" CompNumb="75" />
-      <File Name="Sources/ProcessorExpert.c" FileDate="2015-05-17, 20:31:49" FileAge="1431883909537" FileType="128" />
+      <File Name="Sources/ProcessorExpert.c" FileDate="2015-05-18, 12:28:30" FileAge="1431941310527" FileType="128" />
       <File Name="Generated_Code/IR_LED.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664440" FileType="45637" CompNumb="75" />
       <File Name="Generated_Code/CountTimer.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664416" FileType="45637" CompNumb="47" />
       <File Name="Documentation/doxygen/BitIoLdd11.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664073" FileType="45637" CompNumb="90" />
@@ -140,5 +140,5 @@
       <File Name="Documentation/doxygen/BitIoLdd8.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664096" FileType="45637" CompNumb="57" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>67</CodeGenReference>
+  <CodeGenReference>69</CodeGenReference>
 </CodeGenerationInfo>

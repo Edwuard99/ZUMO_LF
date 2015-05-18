@@ -91,20 +91,25 @@ int main(void)
 
   /* Write your code here */
   CountTimer_Init((LDD_TUserData *)NULL);
+  takeAvg(min_avg, max_avg);
   
 
   
 
   while(1){
-	  readSensors(s);
+	  readSensors(min_avg, max_avg, s);
 	  for(i=0; i<6; i++){
-		  Term1_SendNum(s[0].value);
+		  Term1_SendNum(s[i].value);
 		  Term1_SendStr("  ");
 	  }
+	  for(i=0; i<6; i++){
+		  Term1_SendNum(s[i].seen);
+		  Term1_SendStr("  ");
+	  }
+	  proportional(s);
 	  Term1_SendChar('\n');
 	  Term1_SendChar('\r');
-	  	  
-	  
+
   }
 
 

@@ -49,9 +49,13 @@
 struct sensor{
 	int64_t value;
 	int64_t dist;
+	bool seen;
 };
 
-void readSensors(struct sensor s[6]);
+void irSensors(struct sensor s[6]);
 void motor(int x, int y);
+void takeAvg(int64_t min_avg[6], int64_t max_avg[6]);
+void calibrate(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]);
+void readSensors(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]);
 
 #endif
