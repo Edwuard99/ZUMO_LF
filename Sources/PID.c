@@ -13,17 +13,17 @@ int proportional(struct sensor s[6]){
 	s[4].dist=300;
 	s[5].dist=500;
 
-	if(s[0].value || s[1].value || s[2].value || s[3].value || s[4].value || s[5].value)
+	if(s[0].seen || s[1].seen || s[2].seen || s[3].seen || s[4].seen || s[5].seen)
 		seen=1;
 	else
 		seen=0;
 
 
-	if(last_error==-5 && !seen){
-		error=-5;
+	if(last_error==-500 && !seen){
+		error=-500;
 	}
-	else if (last_error==5 && !seen){
-		error=5;
+	else if (last_error==500 && !seen){
+		error=500;
 	}
 	else{
 		for(i=0; i<6; i++){
@@ -37,6 +37,4 @@ int proportional(struct sensor s[6]){
 	last_error=error;
 
 	Term1_SendNum(error);
-
-
 }

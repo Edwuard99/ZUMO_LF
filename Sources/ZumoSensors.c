@@ -3,7 +3,6 @@
 
 void irSensors(struct sensor s[6]){
 	int64_t a=1,b=1,c=1,d=1,e=1,f=1;
-	int64_t i;
 	int64_t x;
 	IR_LED_SetOutput();
 	IR_LED_PutVal(1);
@@ -176,7 +175,7 @@ void readSensors(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]){
 	irSensors(s);
 	calibrate(min_avg, max_avg, s);
 	for(i=0; i<6; i++){
-		if(s[i].value>145)
+		if(s[i].value>130)
 			s[i].seen=1;
 		else 
 			s[i].seen=0;
