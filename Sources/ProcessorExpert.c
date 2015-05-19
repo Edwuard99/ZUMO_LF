@@ -19,11 +19,11 @@
 ** @brief
 **         Main module.
 **         This module contains user's application code.
-*/         
+*/
 /*!
 **  @addtogroup ProcessorExpert_module ProcessorExpert module documentation
 **  @{
-*/         
+*/
 /* MODULE ProcessorExpert */
 
 /* Including needed modules to compile this module/procedure */
@@ -72,7 +72,8 @@
 #include "IO_Map.h"
 
 #include "ZumoRobot.h"
-
+#define err 1000 //trebuie calibrat, asta ar fi gain-ul pentru componenta proportionala
+#define nominalSpeed 60000
 
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 int main(void)
@@ -83,7 +84,9 @@ int main(void)
 
 	int64_t min_avg[6], max_avg[6];
 	int i;
-	
+	int pondere[6]={10, 20, 30, 40, 50, 60};
+	int pos=0;
+	int cnt=0;
 
   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
   PE_low_level_init();
@@ -92,12 +95,33 @@ int main(void)
   /* Write your code here */
   CountTimer_Init((LDD_TUserData *)NULL);
   takeAvg(min_avg, max_avg);
-  
 
-  
+
+
 
   while(1){
 	  readSensors(min_avg, max_avg, s);
+	  for(i=0;i<6;++i)
+	  {
+		  pos=pos+pondere[i]*s[i].seen;
+		  cnt+=s[i].seen;
+	  }
+	  pos/=cnt;
+		int error=pos-35;
+		motor(err*error+nominalSpeed, err*error-nominalSpeed); //controlul proportional al motoarelor
+		/*
+	  if(pos==35)
+		  motor(60000, 60000);
+	  else if(pos<35&&pos>15)
+		  motor(50000, 65000);
+	  else if(pos>35&&pos<45)
+		  motor(65000, 50000);
+	  else if(pos<=15)
+		  motor(40000, 65000);
+	  else if(pos>=45)
+		  motor(65000, 40000);
+
+		*/
 	  for(i=0; i<6; i++){
 		  Term1_SendNum(s[i].value);
 		  Term1_SendStr("  ");
@@ -111,6 +135,7 @@ int main(void)
 	  Term1_SendChar('\r');
 
   }
+
 
 
 
