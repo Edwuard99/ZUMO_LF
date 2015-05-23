@@ -51,7 +51,7 @@
 struct sensor{
 	int value;
 	int dist;
-	bool seen;
+	int seen;
 };
 
 void irSensors(struct sensor s[6]);//Ia valorile raw ale snezoriilor

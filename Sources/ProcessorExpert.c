@@ -98,30 +98,12 @@ int main(void)
   while(button==1);
 	button=Button_GetVal();
   IR_LED_PutVal(1);
-  //takeAvg(min_avg, max_avg);
-#if DEBUG==TRUE
-  for(i=0; i<6; i++){
-		Term1_SendNum(min_avg[i]);
-		Term1_SendChar("   ");
-	}
-	Term1_SendChar('\n');
-	Term1_SendChar('\r');
-	for(i=0; i<6; i++){
-		Term1_SendNum(max_avg[i]);
-		Term1_SendChar("   ");
-	}
-	Term1_SendChar('\n');
-	Term1_SendChar('\r');
-#endif
-  
 
   while(1){
+	  
 	  readSensors(min_avg, max_avg, s);
 	  
 #if DEBUG==TRUE
-  takeAvg(min_avg, max_avg);
-  while(1){
-	  readSensors(min_avg, max_avg, s);
 	  for(i=0; i<6; i++){
 		  Term1_SendNum(s[i].value);
 		  Term1_SendStr("  ");

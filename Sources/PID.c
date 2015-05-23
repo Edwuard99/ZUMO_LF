@@ -17,7 +17,29 @@ int propder(struct sensor s[6], int error){
 
 	seen=see(s);
 
-	if(last_error<=-500 && seen==-1){
+	if(seen==-1){
+		if(last_error<=-500)
+			error=-1000;
+		else if (last_error>=500)
+			error=1000;
+	}
+	else if (seen==0){
+		for(i=0; i<6; i++){
+			error+=s[i].value*s[i].dist*s[i].seen;
+			d+=s[i].value*s[i].seen;
+		}
+		error/=d;
+		diff=error-last_error;
+	}
+	else if (seen==1){
+		//Incepe o bucla infinita cand toti senzorii vad linia--robotul a ajuns la FINISH
+		while(1);
+	}
+
+	last_error=error;
+	error*=kp;
+
+	/*if(last_error<=-500 && seen==-1){
 		error=-1000;
 	}
 	else if (last_error>=500 && seen==-1){
@@ -36,9 +58,10 @@ int propder(struct sensor s[6], int error){
 		diff=error-last_error;
 
 	}
+
 	last_error=error;
 	error*=kp;
-
+	*/
 
 
 	diff*=kd;
@@ -49,9 +72,9 @@ int propder(struct sensor s[6], int error){
 
 int see(struct sensor s[6]){
 	int seen;
-	if(s[0].seen && s[1].seen && s[2].seen && s[3].seen && s[4].seen && s[5].seen)
+	if(s[0].seen==1 && s[1].seen==1 && s[2].seen==1 && s[3].seen==1 && s[4].seen==1 && s[5].seen==1)
 		seen=1;
-	else if(s[0].seen || s[1].seen || s[2].seen || s[3].seen || s[4].seen || s[5].seen)
+	else if(s[0].seen==0 || s[1].seen==0 || s[2].seen==0 || s[3].seen==0 || s[4].seen==0 || s[5].seen==0)
 		seen=0;
 	else
 		seen=-1;

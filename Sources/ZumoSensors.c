@@ -148,17 +148,19 @@ void calibrate(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]){
 
 void readSensors(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]){
 	/*Functia imbina functiile irSensors si calibrate si 
-	**atribuie valoarea 1 variabilelor s[i].seen daca senzorul i 
+	**atribuie valoarea -1 variabilelor s[i].seen daca senzorul i 
 	**vede linia si 0 in caz contrar
 	*/
 	int i;//contor
-	const int seen=300;//valoare minima pe care senzorul trebuie sa o ia pentru a se considera ce vede linia
+	const int seen=300, stop=500;//valoare minima pe care senzorul trebuie sa o ia pentru a se considera ce vede linia
 	irSensors(s);
 	calibrate(min_avg, max_avg, s);
 	for(i=0; i<6; i++){
-		if(s[i].value>seen)
-			s[i].seen=1;
-		else 
+		if(s[i].value>stop)
 			s[i].seen=0;
+		else if(s[i].value>seen)
+			s[i].seen=1;
+		else
+			s[i].seen=-1;
 	}
 }
