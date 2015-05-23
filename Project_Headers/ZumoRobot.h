@@ -1,6 +1,9 @@
 #ifndef ZUMOROBOT_H
 #define ZUMOROBOT_H
 
+//In header am pus toate include-urile si toate declaratiile de functii
+
+/* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "Cpu.h"
 #include "Events.h"
@@ -37,7 +40,6 @@
 #include "BitIoLdd11.h"
 #include "PullUpButton.h"
 #include "PE_Types.h"
-
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -47,18 +49,17 @@
 
 
 struct sensor{
-	int64_t value;
-	int64_t dist;
+	int value;
+	int dist;
 	bool seen;
 };
 
-void irSensors(struct sensor s[6]);
-void motor(int x, int y);
-void drive(int error);
+void irSensors(struct sensor s[6]);//Ia valorile raw ale snezoriilor
+void motor(int x, int y);//Controlul motoarelor
+void drive(int error);//Controlul motoarelor in functie de eroare
 void takeAvg(int64_t min_avg[6], int64_t max_avg[6]);
-void calibrate(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]);
-void readSensors(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]);
-int propder(struct sensor s[6], int error);
-int control(struct sensor s[6], int error);
-int see(struct sensor s[6]);
+void calibrate(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]);//calibrarea
+void readSensors(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]);//Citirea senzoriilor(irSensors + calibrate)
+int propder(struct sensor s[6], int error);//algoritmul PD
+int see(struct sensor s[6]);//Decide daca un sezor vede sau nu linia
 #endif

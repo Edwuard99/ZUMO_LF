@@ -26,8 +26,8 @@
 */
 /* MODULE ProcessorExpert */
 
-/* Including needed modules to compile this module/procedure */
-#include "Cpu.h"
+
+
 #include "Cpu.h"
 #include "Events.h"
 #include "WAIT1.h"
@@ -63,47 +63,25 @@
 #include "BitIoLdd11.h"
 #include "PullUpButton.h"
 #include "PE_Types.h"
-
-/* Including shared modules, which are used for whole project */
-#include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
 #include "IO_Map.h"
-#include "IO_Map.h"
-
 #include "ZumoRobot.h"
-<<<<<<< HEAD
 #define DEBUG FALSE
-=======
-#define err 1000 //trebuie calibrat, asta ar fi gain-ul pentru componenta proportionala
-#define nominalSpeed 60000
->>>>>>> origin/master
 
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 int main(void)
 /*lint -restore Enable MISRA rule (6.3) checking. */
 {
   /* Write your local variable definition here */
-	IR_LED_PutVal(0);
-	bool but=Button_GetVal();
-	while(but==1);
-		but=Button_GetVal();
-	IR_LED_PutVal(1);
+
+	bool button=1;
+
 	struct sensor s[6];
-<<<<<<< HEAD
 	
 	int64_t min_avg[6]={25, 16, 14, 14, 17, 20};
 	int64_t max_avg[6]={300, 102, 94, 88, 99, 204};
 	int i,error;
-	
-=======
-
-	int64_t min_avg[6], max_avg[6];
-	int i;
-	int pondere[6]={10, 20, 30, 40, 50, 60};
-	int pos=0;
-	int cnt=0;
->>>>>>> origin/master
 
   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
   PE_low_level_init();
@@ -111,11 +89,15 @@ int main(void)
 
   /* Write your code here */
   CountTimer_Init((LDD_TUserData *)NULL);
-<<<<<<< HEAD
   PWM_dreapta_SetRatio16(65535);
   PWM_stanga_SetRatio16(65535);
   PWM_stanga_Enable();
   PWM_dreapta_Enable();
+  
+  IR_LED_PutVal(0);
+  while(button==1);
+	button=Button_GetVal();
+  IR_LED_PutVal(1);
   //takeAvg(min_avg, max_avg);
 #if DEBUG==TRUE
   for(i=0; i<6; i++){
@@ -137,36 +119,9 @@ int main(void)
 	  readSensors(min_avg, max_avg, s);
 	  
 #if DEBUG==TRUE
-=======
   takeAvg(min_avg, max_avg);
-
-
-
-
   while(1){
 	  readSensors(min_avg, max_avg, s);
-	  for(i=0;i<6;++i)
-	  {
-		  pos=pos+pondere[i]*s[i].seen;
-		  cnt+=s[i].seen;
-	  }
-	  pos/=cnt;
-		int error=pos-35;
-		motor(err*error+nominalSpeed, err*error-nominalSpeed); //controlul proportional al motoarelor
-		/*
-	  if(pos==35)
-		  motor(60000, 60000);
-	  else if(pos<35&&pos>15)
-		  motor(50000, 65000);
-	  else if(pos>35&&pos<45)
-		  motor(65000, 50000);
-	  else if(pos<=15)
-		  motor(40000, 65000);
-	  else if(pos>=45)
-		  motor(65000, 40000);
-
-		*/
->>>>>>> origin/master
 	  for(i=0; i<6; i++){
 		  Term1_SendNum(s[i].value);
 		  Term1_SendStr("  ");
