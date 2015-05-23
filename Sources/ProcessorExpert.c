@@ -72,17 +72,23 @@
 #include "IO_Map.h"
 
 #include "ZumoRobot.h"
-
+#define DEBUG FALSE
 
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 int main(void)
 /*lint -restore Enable MISRA rule (6.3) checking. */
 {
   /* Write your local variable definition here */
+	IR_LED_PutVal(0);
+	bool but=Button_GetVal();
+	while(but==1);
+		but=Button_GetVal();
+	IR_LED_PutVal(1);
 	struct sensor s[6];
-
-	int64_t min_avg[6], max_avg[6];
-	int i;
+	
+	int64_t min_avg[6]={25, 16, 14, 14, 17, 20};
+	int64_t max_avg[6]={300, 102, 94, 88, 99, 204};
+	int i,error;
 	
 
   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
@@ -91,13 +97,31 @@ int main(void)
 
   /* Write your code here */
   CountTimer_Init((LDD_TUserData *)NULL);
-  takeAvg(min_avg, max_avg);
-  
-
+  PWM_dreapta_SetRatio16(65535);
+  PWM_stanga_SetRatio16(65535);
+  PWM_stanga_Enable();
+  PWM_dreapta_Enable();
+  //takeAvg(min_avg, max_avg);
+#if DEBUG==TRUE
+  for(i=0; i<6; i++){
+		Term1_SendNum(min_avg[i]);
+		Term1_SendChar("   ");
+	}
+	Term1_SendChar('\n');
+	Term1_SendChar('\r');
+	for(i=0; i<6; i++){
+		Term1_SendNum(max_avg[i]);
+		Term1_SendChar("   ");
+	}
+	Term1_SendChar('\n');
+	Term1_SendChar('\r');
+#endif
   
 
   while(1){
 	  readSensors(min_avg, max_avg, s);
+	  
+#if DEBUG==TRUE
 	  for(i=0; i<6; i++){
 		  Term1_SendNum(s[i].value);
 		  Term1_SendStr("  ");
@@ -106,9 +130,14 @@ int main(void)
 		  Term1_SendNum(s[i].seen);
 		  Term1_SendStr("  ");
 	  }
-	  proportional(s);
+#endif
+	  error=propder(s, error);
+#if DEBUG==TRUE
+	  Term1_SendNum(error);
 	  Term1_SendChar('\n');
 	  Term1_SendChar('\r');
+#endif
+	  drive(error);
 
   }
 

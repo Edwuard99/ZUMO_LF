@@ -2,36 +2,42 @@
 
 
 void irSensors(struct sensor s[6]){
-	int64_t a=1,b=1,c=1,d=1,e=1,f=1;
-	int64_t x;
+	bool a=1,b=1,c=1,d=1,e=1,f=1;
+	int x;
 	IR_LED_SetOutput();
 	IR_LED_PutVal(1);
-	
+
+	//Declararea senzorilor ca output
 	A1_SetOutput();
 	A3_SetOutput();
 	D11_SetOutput();
 	A0_SetOutput();
 	A2_SetOutput();
 	D5_SetOutput();
-	
+
+	//Setarea senzoriilor pe HIGH
 	A1_PutVal(1);
 	A3_PutVal(1);
 	D11_PutVal(1);
 	A0_PutVal(1);
 	A2_PutVal(1);
 	D5_PutVal(1);
-	
-	WAIT1_Waitus(50);
 
+	
+	WAIT1_Waitus(50);//Asteapta 50us pentru incarcarea completa a capacitorului
+
+
+	//Declararea senzorilor ca input
 	A1_SetInput();
 	A3_SetInput();
 	D11_SetInput();
-	A0_SetInput();
+	A0_SetInput();	
 	A2_SetInput();
 	D5_SetInput();
 
-	CountTimer_ResetCounter((LDD_TDeviceData *)NULL);
-	x=CountTimer_GetCounterValue((LDD_TDeviceData *)NULL);
+
+	CountTimer_ResetCounter((LDD_TDeviceData *)NULL); //resetarea counter-ului
+	x=CountTimer_GetCounterValue((LDD_TDeviceData *)NULL); //citirea vaorii counter-ului
 	
 	s[0].value=x;
 	s[1].value=x;
@@ -83,7 +89,6 @@ void takeAvg(int64_t min_avg[6], int64_t max_avg[6]){
 		x=Button_GetVal();
 	}
 	WAIT1_Waitms(500);
-	//LED_Orange_On();
 	for(i=0; i<1000; i++){
 		irSensors(s);
 		min_avg[0]+=s[0].value;
@@ -102,14 +107,17 @@ void takeAvg(int64_t min_avg[6], int64_t max_avg[6]){
 
 	x=1;
 	
-	Term1_SendStr("White");
-	
-	//LED_Orange_Off();
 	while(x){
 		x=Button_GetVal();
+				irSensors(s);
+		for(i=0; i<6; i++){
+		  Term1_SendNum(s[i].value);
+		  Term1_SendStr("  ");
+	  }
+	  	  Term1_SendChar('\n');
+	  Term1_SendChar('\r');
 	}
 	WAIT1_Waitms(500);
-	//LED_Orange_On();
 	for(i=0; i<1000; i++){
 		irSensors(s);
 		max_avg[0]+=s[0].value;
@@ -126,38 +134,6 @@ void takeAvg(int64_t min_avg[6], int64_t max_avg[6]){
 	max_avg[3]/=1000;
 	max_avg[4]/=1000;
 	max_avg[5]/=1000;
-
-	Term1_SendStr("Black");
-	Term1_SendChar('\n');
-	Term1_SendChar('\r');
-
-	Term1_SendNum(min_avg[0]);
-	Term1_SendStr("  ");
-	Term1_SendNum(min_avg[1]);
-	Term1_SendStr("  ");
-	Term1_SendNum(min_avg[2]);
-	Term1_SendStr("  ");
-	Term1_SendNum(min_avg[3]);
-	Term1_SendStr("  ");
-	Term1_SendNum(min_avg[4]);
-	Term1_SendStr("  ");
-	Term1_SendNum(min_avg[5]);
-	Term1_SendChar('\n');
-	Term1_SendChar('\r');
-	Term1_SendNum(max_avg[0]);
-	Term1_SendStr("  ");
-	Term1_SendNum(max_avg[1]);
-	Term1_SendStr("  ");
-	Term1_SendNum(max_avg[2]);
-	Term1_SendStr("  ");
-	Term1_SendNum(max_avg[3]);
-	Term1_SendStr("  ");
-	Term1_SendNum(max_avg[4]);
-	Term1_SendStr("  ");
-	Term1_SendNum(max_avg[5]);
-	Term1_SendChar('\n');
-	Term1_SendChar('\r');
-
 }
 
 void calibrate(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]){
@@ -175,7 +151,7 @@ void readSensors(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]){
 	irSensors(s);
 	calibrate(min_avg, max_avg, s);
 	for(i=0; i<6; i++){
-		if(s[i].value>130)
+		if(s[i].value>200)
 			s[i].seen=1;
 		else 
 			s[i].seen=0;
