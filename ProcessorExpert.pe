@@ -4,7 +4,11 @@
     <Name>ProcessorExpert</Name>
     <SavedBy>Edward</SavedBy>
     <ModificationStamp>54</ModificationStamp>
+<<<<<<< HEAD
     <Date>2015-05-24</Date>
+=======
+    <Date>2015-05-18</Date>
+>>>>>>> parent of adba712... Almost Stable
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.9.2.RT6_b1446-0504</PEversion>
   </Header>

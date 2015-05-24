@@ -60,6 +60,6 @@ void drive(int error);//Controlul motoarelor in functie de eroare
 void takeAvg(int64_t min_avg[6], int64_t max_avg[6]);
 void calibrate(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]);//calibrarea
 void readSensors(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]);//Citirea senzoriilor(irSensors + calibrate)
-int propder(struct sensor s[6], int error);//algoritmul PD
+int propder(struct sensor s[6]);//algoritmul PD
 int see(struct sensor s[6]);//Decide daca un sezor vede sau nu linia
 #endif

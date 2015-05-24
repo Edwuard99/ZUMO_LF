@@ -17,7 +17,11 @@
       <File Name="Documentation/doxygen/PwmLdd1.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664111" FileType="45637" CompNumb="22" />
       <File Name="Generated_Code/PDD/USB_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
       <File Name="Generated_Code/PDD/PORT_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
+<<<<<<< HEAD
       <File Name="Documentation/ProcessorExpert_SIGNALS.txt" FileDate="2015-05-24, 14:38:30" FileAge="1432467510644" FileType="3072" />
+=======
+      <File Name="Documentation/ProcessorExpert_SIGNALS.txt" FileDate="2015-05-18, 20:18:18" FileAge="1431969498373" FileType="3072" />
+>>>>>>> parent of adba712... Almost Stable
       <File Name="Documentation/doxygen/CountTimer.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664104" FileType="45637" CompNumb="47" />
       <File Name="Generated_Code/PE_Const.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664453" FileType="45637" />
       <File Name="Documentation/doxygen/RoutingReport.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664117" FileType="45637" CompNumb="2" />
@@ -104,7 +108,11 @@
       <File Name="Documentation/doxygen/ProcessorExpert.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664105" FileType="45637" CompNumb="2" />
       <File Name="Documentation/doxygen/PullUpButton.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664108" FileType="45637" CompNumb="91" />
       <File Name="Generated_Code/IR_LED.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664443" FileType="45637" CompNumb="75" />
+<<<<<<< HEAD
       <File Name="Sources/ProcessorExpert.c" FileDate="2015-05-24, 14:38:10" FileAge="1432467490134" FileType="128" />
+=======
+      <File Name="Sources/ProcessorExpert.c" FileDate="2015-05-18, 12:48:59" FileAge="1431942539805" FileType="128" />
+>>>>>>> parent of adba712... Almost Stable
       <File Name="Generated_Code/IR_LED.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664440" FileType="45637" CompNumb="75" />
       <File Name="Documentation/doxygen/BitIoLdd11.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664073" FileType="45637" CompNumb="90" />
       <File Name="Generated_Code/CountTimer.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664416" FileType="45637" CompNumb="47" />
@@ -140,5 +148,9 @@
       <File Name="Documentation/doxygen/BitIoLdd8.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664096" FileType="45637" CompNumb="57" />
     </GeneratedByPE>
   </GeneratedFilesList>
+<<<<<<< HEAD
   <CodeGenReference>80</CodeGenReference>
+=======
+  <CodeGenReference>70</CodeGenReference>
+>>>>>>> parent of adba712... Almost Stable
 </CodeGenerationInfo>

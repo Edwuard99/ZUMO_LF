@@ -2,7 +2,7 @@
 
 
 void irSensors(struct sensor s[6]){
-	bool v[6],exit=0;
+	int v[6],exit=0;
 	int timer,i;
 	IR_LED_SetOutput();
 	IR_LED_PutVal(1);
@@ -48,7 +48,7 @@ void irSensors(struct sensor s[6]){
 	
 	
 	//Bucla de citire -- executia buclei se va termina cand s-a terminat citirea tuturor senzorilor
-	while(exit){
+	while(v[0] || v[1] || v[2] || v[3] || v[4] || v[5]){
 		//timer este acum folosit ca un prag pentru a nu pierde prea mult timp cat senzorii sunt pe negru
 		timer=CountTimer_GetCounterValue((LDD_TDeviceData *)NULL);
 
@@ -60,14 +60,11 @@ void irSensors(struct sensor s[6]){
 		v[4]=A2_GetVal();
 		v[5]=D5_GetVal();
 
-		exit=0;
 
 		//Daca intrarea unui senzor este 1 ii este atribuita variabilei s[i].value ultima valoare a timer-ului
 		for(i=0; i<6; i++){
-			if(v[i]){
+			if(v[i])
 				s[i].value=CountTimer_GetCounterValue((LDD_TDeviceData *)NULL);
-				exit=1;
-			}
 		}
 
 		if(timer>3000)
@@ -77,62 +74,7 @@ void irSensors(struct sensor s[6]){
 
 }
 
-void takeAvg(int64_t min_avg[6], int64_t max_avg[6]){
-	/*
-	**Functia takeAvg ia cate 1000 de valori pentru cand robotul este pe alb si
-	**respectiv pe negru si face media
-	*/
-	int x=1,i;
-	struct sensor s[6];
-	//initializeaza valorile medii pe alb si respectiv pe negru cu 0
-	for(i=0; i<6; i++){
-		min_avg[i]=0;
-		max_avg[i]=0;
-	}
-	//asteptam ca apasarea butonului
-	while(x){
-		x=Button_GetVal();
-	}
-	WAIT1_Waitms(500);//asteptam 500 ms deoarece media valorilor pe alb se face foarte rapid si este posibil sa se treaca pe negru accidental
-	for(i=0; i<1000; i++){
-		irSensors(s);
-		min_avg[0]+=s[0].value;
-		min_avg[1]+=s[1].value;
-		min_avg[2]+=s[2].value;
-		min_avg[3]+=s[3].value;
-		min_avg[4]+=s[4].value;
-		min_avg[5]+=s[5].value;
-	}
-	min_avg[0]/=1000;
-	min_avg[1]/=1000;
-	min_avg[2]/=1000;
-	min_avg[3]/=1000;
-	min_avg[4]/=1000;
-	min_avg[5]/=1000;
 
-	x=1;
-	
-	while(x){
-		x=Button_GetVal();
-	}
-	WAIT1_Waitms(500);
-	for(i=0; i<1000; i++){
-		irSensors(s);
-		max_avg[0]+=s[0].value;
-		max_avg[1]+=s[1].value;
-		max_avg[2]+=s[2].value;
-		max_avg[3]+=s[3].value;
-		max_avg[4]+=s[4].value;
-		max_avg[5]+=s[5].value;
-	}
-
-	max_avg[0]/=1000;
-	max_avg[1]/=1000;
-	max_avg[2]/=1000;
-	max_avg[3]/=1000;
-	max_avg[4]/=1000;
-	max_avg[5]/=1000;
-}
 
 void calibrate(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]){
 	/*Functia calibrate prelucreaza valorile maxime pe alb si negru si 
@@ -152,14 +94,14 @@ void readSensors(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]){
 	**vede linia si 0 in caz contrar
 	*/
 	int i;//contor
-	const int seen=300, stop=500;//valoare minima pe care senzorul trebuie sa o ia pentru a se considera ce vede linia
+	const int seen=130, stop=700;//valoare minima pe care senzorul trebuie sa o ia pentru a se considera ce vede linia
 	irSensors(s);
 	calibrate(min_avg, max_avg, s);
 	for(i=0; i<6; i++){
 		if(s[i].value>stop)
-			s[i].seen=0;
-		else if(s[i].value>seen)
 			s[i].seen=1;
+		else if(s[i].value>seen)
+			s[i].seen=0;
 		else
 			s[i].seen=-1;
 	}

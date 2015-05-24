@@ -67,7 +67,7 @@
 #include "PE_Const.h"
 #include "IO_Map.h"
 #include "ZumoRobot.h"
-#define DEBUG TRUE
+#define DEBUG FALSE
 
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 int main(void)
@@ -79,9 +79,10 @@ int main(void)
 
 	struct sensor s[6];
 	
-	int64_t min_avg[6]={25, 16, 14, 14, 17, 20};
-	int64_t max_avg[6]={300, 102, 94, 88, 99, 204};
-	int i,error;
+	int64_t min_avg[6]={23, 14, 15, 15, 18, 23};
+	int64_t max_avg[6]={2000, 193, 172, 170, 160, 550};
+	int i;
+	int64_t error;
 
   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
   PE_low_level_init();
@@ -98,15 +99,15 @@ int main(void)
   PWM_dreapta_Enable();
   
   IR_LED_PutVal(0);
-  while(button==1)
+  while(button)
 	button=Button_GetVal();
   WAIT1_Waitms(500);
   IR_LED_PutVal(1);
 
   while(1){
 	  
-	  //readSensors(min_avg, max_avg, s);
-	  irSensors(s);
+	  readSensors(min_avg, max_avg, s);
+	  
 #if DEBUG==TRUE
 	  for(i=0; i<6; i++){
 		  Term1_SendNum(s[i].value);
@@ -116,14 +117,17 @@ int main(void)
 		  Term1_SendNum(s[i].seen);
 		  Term1_SendStr("  ");
 	  }
+	  Term1_SendStr("  ");
+	  Term1_SendStr("  ");
+	  Term1_SendStr("  ");
 #endif
-	  error=propder(s, error);
+	  error=propder(s);
 #if DEBUG==TRUE
 	  Term1_SendNum(error);
 	  Term1_SendChar('\n');
 	  Term1_SendChar('\r');
 #endif
-	  //drive(error);
+	  drive(error);
 
   }
 
