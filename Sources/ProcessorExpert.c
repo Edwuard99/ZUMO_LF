@@ -67,7 +67,7 @@
 #include "PE_Const.h"
 #include "IO_Map.h"
 #include "ZumoRobot.h"
-#define DEBUG FALSE
+#define DEBUG TRUE
 
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 int main(void)
@@ -88,21 +88,25 @@ int main(void)
   /*** End of Processor Expert internal initialization.                    ***/
 
   /* Write your code here */
+  //Initializeaza timer-ul
   CountTimer_Init((LDD_TUserData *)NULL);
+  //Opreste motoarele
   PWM_dreapta_SetRatio16(65535);
   PWM_stanga_SetRatio16(65535);
+  //Activeaza PWM-ul pentru motoare
   PWM_stanga_Enable();
   PWM_dreapta_Enable();
   
   IR_LED_PutVal(0);
-  while(button==1);
+  while(button==1)
 	button=Button_GetVal();
+  WAIT1_Waitms(500);
   IR_LED_PutVal(1);
 
   while(1){
 	  
-	  readSensors(min_avg, max_avg, s);
-	  
+	  //readSensors(min_avg, max_avg, s);
+	  irSensors(s);
 #if DEBUG==TRUE
 	  for(i=0; i<6; i++){
 		  Term1_SendNum(s[i].value);
@@ -119,7 +123,7 @@ int main(void)
 	  Term1_SendChar('\n');
 	  Term1_SendChar('\r');
 #endif
-	  drive(error);
+	  //drive(error);
 
   }
 
