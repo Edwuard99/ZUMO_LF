@@ -1,7 +1,14 @@
+/*#################################################################################################################################################################################
+**		Acesta este fisierul header folosit pentru intregul proiect.
+**	Fisierul include celelalte fisiere header astfel lasand fisierul principal mai "aerisit". Contine declaratiile tuturor functiilor create de echipa noastra si
+**o structura de date de tip sensor care contine:
+**	--o varibila de tip int unde va fi retinuta valoarea senzorului
+**	--o variabil de tip int unde va fi retinuta distanta
+**	--o varibila de tip int unde va fi retinut daca senzorul vede sau nu linia
+**Structura respectiva este folosita in majoritatea functiilor ce fac parte din proiect.
+**#################################################################################################################################################################################*/
 #ifndef ZUMOROBOT_H
 #define ZUMOROBOT_H
-
-//In header am pus toate include-urile si toate declaratiile de functii
 
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
@@ -49,17 +56,33 @@
 
 
 struct sensor{
+	/*** value - valoarea                  ***/
 	int value;
+	/*** dist - distanta fata de centru    ***/
 	int dist;
+	/*** seen - senzorul vede sau nu linia ***/
 	int seen;
 };
 
-void irSensors(struct sensor s[6]);//Ia valorile raw ale snezoriilor
-void motor(int x, int y);//Controlul motoarelor
-void drive(int error);//Controlul motoarelor in functie de eroare
-void takeAvg(int64_t min_avg[6], int64_t max_avg[6]);
-void calibrate(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]);//calibrarea
-void readSensors(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]);//Citirea senzoriilor(irSensors + calibrate)
-int propder(struct sensor s[6]);//algoritmul PD
-int see(struct sensor s[6]);//Decide daca un sezor vede sau nu linia
+/*** Citeste valorile "raw" ale senzorilor.                                                  ***/
+void irSensors(struct sensor s[6]);
+
+/*** Calibreaza valorile senzorilor.                                                         ***/
+void calibrate(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]);
+
+/*** Combina functiile irSensors si calibrate si stabileste daca un sezor vede sau nu linia. ***/
+void readSensors(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]);
+
+/*** Algoritmul PD propriu-zis.                                                              ***/
+int propder(struct sensor s[6]);
+
+/*** Transmite o valoare in functie de cati senzor vad linia.                                ***/
+int see(struct sensor s[6]);
+
+/*** Controlul motoarelor.                                                                   ***/
+void motor(int left, int right);
+
+/*** Controlul motoarelor in functie de eroare.                                              ***/
+void drive(int error);
+
 #endif
