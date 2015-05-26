@@ -28,7 +28,7 @@ void irSensors(struct sensor s[6]){
 	**#############################################################################################################################################################################*/
 	int v[6];
 	int timer,i;
-	const int prag=3000;
+	const int prag=1000;
 	IR_LED_SetOutput();
 	IR_LED_PutVal(1);
 
@@ -152,7 +152,7 @@ void readSensors(int64_t min_avg[6], int64_t max_avg[6], struct sensor s[6]){
 	**  --daca nicuna din cele doua conditii nu este indeplinita variabila s[i].seen va avea valoarea -1
 	**#############################################################################################################################################################################*/
 	int i;
-	const int seen=130, stop=700;
+	const int seen=120, stop=800;
 	irSensors(s);
 	calibrate(min_avg, max_avg, s);
 	for(i=0; i<6; i++){

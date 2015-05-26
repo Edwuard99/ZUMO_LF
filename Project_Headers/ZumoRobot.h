@@ -1,6 +1,6 @@
 /*#################################################################################################################################################################################
 **		Acesta este fisierul header folosit pentru intregul proiect.
-**	Fisierul include celelalte fisiere header astfel lasand fisierul principal mai "aerisit". Contine declaratiile tuturor functiilor create de echipa noastra si
+**	Fisierul contine declaratiile tuturor functiilor create de echipa noastra si
 **o structura de date de tip sensor care contine:
 **	--o varibila de tip int unde va fi retinuta valoarea senzorului
 **	--o variabil de tip int unde va fi retinuta distanta
@@ -83,6 +83,6 @@ int see(struct sensor s[6]);
 void motor(int left, int right);
 
 /*** Controlul motoarelor in functie de eroare.                                              ***/
-void drive(int error);
+void drive(int64_t error);
 
 #endif

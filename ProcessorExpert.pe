@@ -3,14 +3,10 @@
   <Header>
     <Name>ProcessorExpert</Name>
     <SavedBy>Edward</SavedBy>
-    <ModificationStamp>54</ModificationStamp>
-<<<<<<< HEAD
-    <Date>2015-05-24</Date>
-=======
-    <Date>2015-05-18</Date>
->>>>>>> parent of adba712... Almost Stable
+    <ModificationStamp>46</ModificationStamp>
+    <Date>2015-05-25</Date>
     <IDE>Eclipse IDE</IDE>
-    <PEversion>1.9.2.RT6_b1446-0504</PEversion>
+    <PEversion>1.9.0.RT6_b1411-0406</PEversion>
   </Header>
   <Options>
     <EventsDirectory>Sources</EventsDirectory>
@@ -32,7 +28,7 @@
     <UseExistingModules>true</UseExistingModules>
     <RenamePeripheries>false</RenamePeripheries>
     <Autodependency>true</Autodependency>
-    <ProjectCompNumb>109</ProjectCompNumb>
+    <ProjectCompNumb>100</ProjectCompNumb>
     <DelUnusedPreviouslyGenFiles>true</DelUnusedPreviouslyGenFiles>
     <GeneratedCodeFrozen>false</GeneratedCodeFrozen>
     <AssignInitComponentNameToPrph>true</AssignInitComponentNameToPrph>
@@ -5431,7 +5427,7 @@
                   </ItemState>
                   <ItemState>
                     <ItemSymbol>InitDir</ItemSymbol>
-                    <ReadOnly>true</ReadOnly>
+                    <ReadOnly>false</ReadOnly>
                     <UserReadOnly>false</UserReadOnly>
                     <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
                     <Index>1</Index>
@@ -5455,7 +5451,7 @@
                   </ItemState>
                   <ItemState>
                     <ItemSymbol>SafeMode</ItemSymbol>
-                    <ReadOnly>true</ReadOnly>
+                    <ReadOnly>false</ReadOnly>
                     <UserReadOnly>false</UserReadOnly>
                     <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
                     <Index>1</Index>
@@ -7091,11 +7087,11 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>SetInput</ItemSymbol>
-              <ReadOnly>false</ReadOnly>
+              <ReadOnly>true</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
               <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-              <Index>1</Index>
-              <Value>false</Value>
+              <Index>0</Index>
+              <Value>true</Value>
               <LastSelection>false</LastSelection>
               <LastUserSel>no</LastUserSel>
               <UsrMethodName>SetInput</UsrMethodName>
@@ -7324,10 +7320,10 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>1</Index>
-        <Value>false</Value>
+        <Index>0</Index>
+        <Value>true</Value>
         <LastSelection>true</LastSelection>
-        <LastUserSel>no</LastUserSel>
+        <LastUserSel>yes</LastUserSel>
         <UsrMethodName>SetInput</UsrMethodName>
       </ItemState>
       <ItemState>
@@ -7441,7 +7437,7 @@
     <UserFolderName />
     <Comment lines_count="0" />
     <Template />
-    <BeanVersion>02.241</BeanVersion>
+    <BeanVersion>02.240</BeanVersion>
     <LightErrorsIgnored>false</LightErrorsIgnored>
     <Properties>
       <ItemState>
@@ -10448,7 +10444,7 @@
     <UserFolderName />
     <Comment lines_count="0" />
     <Template />
-    <BeanVersion>02.241</BeanVersion>
+    <BeanVersion>02.240</BeanVersion>
     <LightErrorsIgnored>false</LightErrorsIgnored>
     <Properties>
       <ItemState>
@@ -20199,10 +20195,10 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>0</Index>
-        <Value>true</Value>
+        <Index>1</Index>
+        <Value>false</Value>
         <LastSelection>true</LastSelection>
-        <LastUserSel>yes</LastUserSel>
+        <LastUserSel>no</LastUserSel>
         <UsrMethodName>SendFloatNum</UsrMethodName>
       </ItemState>
       <ItemState>

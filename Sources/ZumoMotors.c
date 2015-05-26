@@ -47,7 +47,7 @@ void motor(int left, int right)
 
 }
 
-void drive(int error){
+void drive(int64_t error){
 	/*#############################################################################################################################################################################
 	**		Functia drive controleaza motoarele in functie de valoarea erorii.
 	**Argumentul functiei este eroarea.
@@ -61,10 +61,10 @@ void drive(int error){
 	const int maxspd=65535;
 	const int k=131;
 	error*=k;
-	if(error>65535)
-		error=65535;
-	if(error<-65535)
+	/*if(error<-65535)
 		error=-65535;
+	if(error>65535)
+		error=65535;*/
 	if(error>0)
 		motor(maxspd, maxspd-error);
 	else{

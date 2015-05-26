@@ -6,7 +6,7 @@
 **     Component   : BitIO_LDD
 **     Version     : Component 01.033, Driver 01.03, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-05-17, 19:34, # CodeGen: 65
+**     Date/Time   : 2015-05-25, 12:16, # CodeGen: 50
 **     Abstract    :
 **         The HAL BitIO component provides a low level API for unified
 **         access to general purpose digital input/output pins across
@@ -27,6 +27,7 @@
 **     Contents    :
 **         Init      - LDD_TDeviceData* BitIoLdd3_Init(LDD_TUserData *UserDataPtr);
 **         SetDir    - void BitIoLdd3_SetDir(LDD_TDeviceData *DeviceDataPtr, bool Dir);
+**         SetInput  - void BitIoLdd3_SetInput(LDD_TDeviceData *DeviceDataPtr);
 **         SetOutput - void BitIoLdd3_SetOutput(LDD_TDeviceData *DeviceDataPtr);
 **         GetVal    - bool BitIoLdd3_GetVal(LDD_TDeviceData *DeviceDataPtr);
 **         PutVal    - void BitIoLdd3_PutVal(LDD_TDeviceData *DeviceDataPtr, bool Val);
@@ -111,6 +112,7 @@ extern "C" {
 /* Methods configuration constants - generated for all enabled component's methods */
 #define BitIoLdd3_Init_METHOD_ENABLED  /*!< Init method of the component BitIoLdd3 is enabled (generated) */
 #define BitIoLdd3_SetDir_METHOD_ENABLED /*!< SetDir method of the component BitIoLdd3 is enabled (generated) */
+#define BitIoLdd3_SetInput_METHOD_ENABLED /*!< SetInput method of the component BitIoLdd3 is enabled (generated) */
 #define BitIoLdd3_SetOutput_METHOD_ENABLED /*!< SetOutput method of the component BitIoLdd3 is enabled (generated) */
 #define BitIoLdd3_GetVal_METHOD_ENABLED /*!< GetVal method of the component BitIoLdd3 is enabled (generated) */
 #define BitIoLdd3_PutVal_METHOD_ENABLED /*!< PutVal method of the component BitIoLdd3 is enabled (generated) */
@@ -166,6 +168,21 @@ LDD_TDeviceData* BitIoLdd3_Init(LDD_TUserData *UserDataPtr);
 */
 /* ===================================================================*/
 void BitIoLdd3_SetDir(LDD_TDeviceData *DeviceDataPtr, bool Dir);
+
+/*
+** ===================================================================
+**     Method      :  BitIoLdd3_SetInput (component BitIO_LDD)
+*/
+/*!
+**     @brief
+**         Sets a pin direction to input (available only if the
+**         direction = _[input/output]_).
+**     @param
+**         DeviceDataPtr   - Device data structure
+**                           pointer returned by <Init> method.
+*/
+/* ===================================================================*/
+void BitIoLdd3_SetInput(LDD_TDeviceData *DeviceDataPtr);
 
 /*
 ** ===================================================================

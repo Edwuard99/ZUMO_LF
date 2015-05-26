@@ -6,18 +6,17 @@
 **     Component   : Term
 **     Version     : Component 02.061, Driver 03.22, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-05-15, 20:27, # CodeGen: 50
+**     Date/Time   : 2015-04-29, 22:02, # CodeGen: 39
 **     Abstract    :
 **This components generates low-level console IO routines for selected UART.
 **     Settings    :
 **
 **     Contents    :
-**         CRLF         - void Term1_CRLF(void);
-**         SendStr      - void Term1_SendStr(uint8_t *str);
-**         SendNum      - void Term1_SendNum(int32_t number);
-**         SendFloatNum - byte Term1_SendFloatNum(TPE_Float number);
-**         SendChar     - void Term1_SendChar(char_t Val);
-**         MoveTo       - void Term1_MoveTo(uint8_t x, uint8_t y);
+**         CRLF     - void Term1_CRLF(void);
+**         SendStr  - void Term1_SendStr(uint8_t *str);
+**         SendNum  - void Term1_SendNum(int32_t number);
+**         SendChar - void Term1_SendChar(char_t Val);
+**         MoveTo   - void Term1_MoveTo(uint8_t x, uint8_t y);
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -122,29 +121,6 @@ void Term1_SendNum(int32_t number);
 **         NAME            - DESCRIPTION
 **         number          - Long number
 **     Returns     : Nothing
-** ===================================================================
-*/
-
-byte Term1_SendFloatNum(TPE_Float number);
-/*
-** ===================================================================
-**     Method      :  Term1_SendFloatNum (component Term)
-**     Description :
-**         Send a float number to the terminal. Due to the
-**         transformations the maximum float number is limited
-**         according to the following conditions: 
-**         - positive number: 9 digits for integer part with 4 digits
-**         for fractional part. 
-**         - negative numbers: 8 digits for integer part with 4 digits
-**         for fractional part.
-**     Parameters  :
-**         NAME            - DESCRIPTION
-**         number          - Float variable
-**     Returns     :
-**         ---             - Error code, possible codes:
-**                           ERR_OK - OK
-**                           ERR_RANGE - Float number exceeds maximal
-**                           number limitation.
 ** ===================================================================
 */
 

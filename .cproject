@@ -125,5 +125,4 @@
 			<resource resourceType="PROJECT" workspacePath="/FSL_LF_demo"/>
 		</configuration>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>

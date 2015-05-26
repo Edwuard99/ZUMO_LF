@@ -12,145 +12,132 @@
   </ToolchainSettings>
   <GeneratedFilesList>
     <GeneratedByPE>
-      <File Name="Generated_Code/Term1.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664516" FileType="45637" CompNumb="63" />
-      <File Name="Documentation/doxygen/pex.css" FileDate="2015-05-16, 13:04:24" FileAge="1431770664128" FileType="16384" CompNumb="2" />
-      <File Name="Documentation/doxygen/PwmLdd1.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664111" FileType="45637" CompNumb="22" />
+      <File Name="Generated_Code/Term1.c" FileDate="2015-05-15, 19:38:23" FileAge="1431707903362" FileType="45637" CompNumb="63" />
+      <File Name="Documentation/doxygen/pex.css" FileDate="2015-05-15, 19:38:20" FileAge="1431707900970" FileType="16384" CompNumb="2" />
+      <File Name="Documentation/doxygen/PwmLdd1.txt" FileDate="2015-05-15, 19:38:21" FileAge="1431707901027" FileType="45637" CompNumb="22" />
       <File Name="Generated_Code/PDD/USB_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
       <File Name="Generated_Code/PDD/PORT_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-<<<<<<< HEAD
-      <File Name="Documentation/ProcessorExpert_SIGNALS.txt" FileDate="2015-05-24, 14:38:30" FileAge="1432467510644" FileType="3072" />
-=======
-      <File Name="Documentation/ProcessorExpert_SIGNALS.txt" FileDate="2015-05-18, 20:18:18" FileAge="1431969498373" FileType="3072" />
->>>>>>> parent of adba712... Almost Stable
-      <File Name="Documentation/doxygen/CountTimer.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664104" FileType="45637" CompNumb="47" />
-      <File Name="Generated_Code/PE_Const.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664453" FileType="45637" />
-      <File Name="Documentation/doxygen/RoutingReport.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664117" FileType="45637" CompNumb="2" />
-      <File Name="Documentation/doxygen/BitIoLdd2.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664077" FileType="45637" CompNumb="18" />
-      <File Name="Generated_Code/PE_LDD.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664463" FileType="45637" CompNumb="2" />
-      <File Name="Generated_Code/PE_LDD.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664460" FileType="45637" CompNumb="2" />
+      <File Name="Documentation/ProcessorExpert_SIGNALS.txt" FileDate="2015-05-25, 15:26:46" FileAge="1432556806518" FileType="3072" />
+      <File Name="Documentation/doxygen/CountTimer.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900957" FileType="45637" CompNumb="47" />
+      <File Name="Generated_Code/PE_Const.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903110" FileType="45637" />
+      <File Name="Documentation/doxygen/RoutingReport.txt" FileDate="2015-05-15, 19:38:21" FileAge="1431707901056" FileType="45637" CompNumb="2" />
+      <File Name="Documentation/doxygen/BitIoLdd2.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900842" FileType="45637" CompNumb="18" />
+      <File Name="Generated_Code/PE_LDD.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903159" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/PE_LDD.c" FileDate="2015-05-15, 19:38:23" FileAge="1431707903144" FileType="45637" CompNumb="2" />
       <File Name="Generated_Code/PDD/UART_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Documentation/doxygen/BitIoLdd7.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664093" FileType="45637" CompNumb="55" />
-      <File Name="Generated_Code/BitIoLdd9.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664403" FileType="45637" CompNumb="59" />
+      <File Name="Documentation/doxygen/BitIoLdd7.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900914" FileType="45637" CompNumb="55" />
+      <File Name="Generated_Code/BitIoLdd9.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389322" FileType="45637" CompNumb="59" />
       <File Name="Generated_Code/PDD/COP_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
       <File Name="Generated_Code/PDD/TPM_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Generated_Code/PwmLdd2.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664500" FileType="45637" CompNumb="34" />
-      <File Name="Generated_Code/BitIoLdd9.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664400" FileType="45637" CompNumb="59" />
-      <File Name="Generated_Code/BitIoLdd8.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664397" FileType="45637" CompNumb="57" />
-      <File Name="Generated_Code/PwmLdd2.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664497" FileType="45637" CompNumb="34" />
-      <File Name="Generated_Code/PwmLdd1.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664493" FileType="45637" CompNumb="22" />
-      <File Name="Generated_Code/BitIoLdd8.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664394" FileType="45637" CompNumb="57" />
-      <File Name="Generated_Code/BitIoLdd7.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664391" FileType="45637" CompNumb="55" />
+      <File Name="Generated_Code/PwmLdd2.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903251" FileType="45637" CompNumb="34" />
+      <File Name="Generated_Code/BitIoLdd9.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389330" FileType="45637" CompNumb="59" />
+      <File Name="Generated_Code/BitIoLdd8.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389288" FileType="45637" CompNumb="57" />
+      <File Name="Generated_Code/PwmLdd2.c" FileDate="2015-05-15, 19:38:23" FileAge="1431707903236" FileType="45637" CompNumb="34" />
+      <File Name="Generated_Code/PwmLdd1.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903226" FileType="45637" CompNumb="22" />
+      <File Name="Generated_Code/BitIoLdd8.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389298" FileType="45637" CompNumb="57" />
+      <File Name="Generated_Code/BitIoLdd7.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389254" FileType="45637" CompNumb="55" />
       <File Name="Generated_Code/PDD/PDD_Types.h" FileDate="2013-04-18, 00:55:42" FileAge="1366235742000" FileType="262144" />
-      <File Name="Generated_Code/PwmLdd1.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664490" FileType="45637" CompNumb="22" />
-      <File Name="Generated_Code/PullUpButton.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664487" FileType="45637" CompNumb="91" />
-      <File Name="Generated_Code/BitIoLdd7.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664388" FileType="45637" CompNumb="55" />
-      <File Name="Project_Settings/Linker_Files/ProcessorExpert.ld" FileDate="2015-05-16, 13:04:24" FileAge="1431770664596" FileType="8" CompNumb="2" />
-      <File Name="Generated_Code/BitIoLdd6.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664385" FileType="45637" CompNumb="53" />
-      <File Name="Documentation/ProcessorExpert_Settings.xml" FileDate="2015-05-17, 19:34:49" FileAge="1431880489316" FileType="3072" />
-      <File Name="Generated_Code/PullUpButton.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664484" FileType="45637" CompNumb="91" />
-      <File Name="Documentation/ProcessorExpert.txt" FileDate="2015-05-17, 19:34:52" FileAge="1431880492992" FileType="3072" />
+      <File Name="Generated_Code/PwmLdd1.c" FileDate="2015-05-15, 19:38:23" FileAge="1431707903210" FileType="45637" CompNumb="22" />
+      <File Name="Generated_Code/PullUpButton.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903201" FileType="45637" CompNumb="91" />
+      <File Name="Generated_Code/BitIoLdd7.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389262" FileType="45637" CompNumb="55" />
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.ld" FileDate="2015-05-15, 19:38:23" FileAge="1431707903529" FileType="8" CompNumb="2" />
+      <File Name="Generated_Code/BitIoLdd6.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389220" FileType="45637" CompNumb="53" />
+      <File Name="Documentation/ProcessorExpert_Settings.xml" FileDate="2015-05-25, 12:16:29" FileAge="1432545389461" FileType="3072" />
+      <File Name="Generated_Code/PullUpButton.c" FileDate="2015-05-15, 19:38:23" FileAge="1431707903186" FileType="45637" CompNumb="91" />
+      <File Name="Documentation/ProcessorExpert.txt" FileDate="2015-05-25, 12:16:29" FileAge="1432545389499" FileType="3072" />
       <File Name="Generated_Code/PDD/CMP_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Generated_Code/BitIoLdd6.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664380" FileType="45637" CompNumb="53" />
-      <File Name="Generated_Code/BitIoLdd5.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664377" FileType="45637" CompNumb="51" />
+      <File Name="Generated_Code/BitIoLdd6.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389230" FileType="45637" CompNumb="53" />
+      <File Name="Generated_Code/BitIoLdd5.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389173" FileType="45637" CompNumb="51" />
       <File Name="Generated_Code/PDD/DMAMUX_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Generated_Code/PWM_stanga.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664481" FileType="45637" CompNumb="33" />
-      <File Name="Generated_Code/BitIoLdd5.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664374" FileType="45637" CompNumb="51" />
-      <File Name="Generated_Code/BitIoLdd4.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664371" FileType="45637" CompNumb="49" />
+      <File Name="Generated_Code/PWM_stanga.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903302" FileType="45637" CompNumb="33" />
+      <File Name="Generated_Code/BitIoLdd5.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389188" FileType="45637" CompNumb="51" />
+      <File Name="Generated_Code/BitIoLdd4.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389128" FileType="45637" CompNumb="49" />
       <File Name="Generated_Code/PDD/SPI_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Documentation/doxygen/BitIoLdd6.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664090" FileType="45637" CompNumb="53" />
-      <File Name="Generated_Code/PWM_stanga.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664478" FileType="45637" CompNumb="33" />
-      <File Name="Generated_Code/PDD/SIM_PDD.h" FileDate="2014-05-14, 13:09:28" FileAge="1400062168000" FileType="262144" />
-      <File Name="Generated_Code/BitIoLdd4.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664368" FileType="45637" CompNumb="49" />
-      <File Name="Generated_Code/BitIoLdd3.h" FileDate="2015-05-17, 19:34:49" FileAge="1431880489055" FileType="45637" CompNumb="20" />
+      <File Name="Documentation/doxygen/BitIoLdd6.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900899" FileType="45637" CompNumb="53" />
+      <File Name="Generated_Code/PWM_stanga.c" FileDate="2015-05-15, 19:38:23" FileAge="1431707903287" FileType="45637" CompNumb="33" />
+      <File Name="Generated_Code/PDD/SIM_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
+      <File Name="Generated_Code/BitIoLdd4.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389139" FileType="45637" CompNumb="49" />
+      <File Name="Generated_Code/BitIoLdd3.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389084" FileType="45637" CompNumb="20" />
       <File Name="Generated_Code/PDD/DAC_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
       <File Name="Generated_Code/PDD/GPIO_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Generated_Code/BitIoLdd3.c" FileDate="2015-05-17, 19:34:49" FileAge="1431880489063" FileType="45637" CompNumb="20" />
-      <File Name="Generated_Code/BitIoLdd2.h" FileDate="2015-05-17, 19:34:49" FileAge="1431880489018" FileType="45637" CompNumb="18" />
-      <File Name="Generated_Code/Inhr1.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664450" FileType="45637" CompNumb="70" />
-      <File Name="Generated_Code/A3.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664332" FileType="45637" CompNumb="50" />
-      <File Name="Generated_Code/BitIoLdd2.c" FileDate="2015-05-17, 19:34:49" FileAge="1431880489027" FileType="45637" CompNumb="18" />
+      <File Name="Generated_Code/BitIoLdd3.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389096" FileType="45637" CompNumb="20" />
+      <File Name="Generated_Code/BitIoLdd2.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389039" FileType="45637" CompNumb="18" />
+      <File Name="Generated_Code/Inhr1.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903056" FileType="45637" CompNumb="70" />
+      <File Name="Generated_Code/A3.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389199" FileType="45637" CompNumb="50" />
+      <File Name="Generated_Code/BitIoLdd2.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389049" FileType="45637" CompNumb="18" />
       <File Name="Generated_Code/PDD/SysTick_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Generated_Code/Inhr1.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664447" FileType="45637" CompNumb="70" />
-      <File Name="Documentation/doxygen/pex.doxyfile" FileDate="2015-05-16, 13:04:24" FileAge="1431770664131" FileType="45637" CompNumb="2" />
-      <File Name="Generated_Code/D5.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664434" FileType="45637" CompNumb="58" />
+      <File Name="Generated_Code/Inhr1.c" FileDate="2015-05-15, 19:38:23" FileAge="1431707903041" FileType="45637" CompNumb="70" />
+      <File Name="Documentation/doxygen/pex.doxyfile" FileDate="2015-05-25, 12:11:36" FileAge="1432545096404" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/D5.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389338" FileType="45637" CompNumb="58" />
       <File Name="Generated_Code/PDD/DMA_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Generated_Code/Cpu.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664422" FileType="45637" CompNumb="2" />
-      <File Name="Generated_Code/A3.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664329" FileType="45637" CompNumb="50" />
-      <File Name="Generated_Code/A2.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664326" FileType="45637" CompNumb="56" />
-      <File Name="Generated_Code/D5.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664431" FileType="45637" CompNumb="58" />
-      <File Name="Generated_Code/PWM_dreapta.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664474" FileType="45637" CompNumb="21" />
-      <File Name="Generated_Code/IO_Map.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664437" FileType="45637" />
-      <File Name="Generated_Code/Cpu.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664419" FileType="45637" CompNumb="2" />
-      <File Name="Generated_Code/ASerialLdd2.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664339" FileType="45637" CompNumb="71" />
-      <File Name="Generated_Code/PE_Error.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664457" FileType="45637" />
-      <File Name="Generated_Code/TU2.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664512" FileType="45637" CompNumb="43" />
-      <File Name="Generated_Code/A2.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664323" FileType="45637" CompNumb="56" />
-      <File Name="Generated_Code/A1.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664320" FileType="45637" CompNumb="48" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2015-05-15, 19:38:22" FileAge="1431707902979" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/A3.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389210" FileType="45637" CompNumb="50" />
+      <File Name="Generated_Code/A2.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389306" FileType="45637" CompNumb="56" />
+      <File Name="Generated_Code/D5.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389346" FileType="45637" CompNumb="58" />
+      <File Name="Generated_Code/PWM_dreapta.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903276" FileType="45637" CompNumb="21" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903071" FileType="45637" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2015-05-15, 19:38:22" FileAge="1431707902965" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/ASerialLdd2.h" FileDate="2015-05-15, 19:38:22" FileAge="1431707902651" FileType="45637" CompNumb="71" />
+      <File Name="Generated_Code/PE_Error.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903124" FileType="45637" />
+      <File Name="Generated_Code/TU2.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903427" FileType="45637" CompNumb="43" />
+      <File Name="Generated_Code/A2.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389314" FileType="45637" CompNumb="56" />
+      <File Name="Generated_Code/A1.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389149" FileType="45637" CompNumb="48" />
       <File Name="Generated_Code/PDD/ADC_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Generated_Code/PWM_dreapta.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664471" FileType="45637" CompNumb="21" />
-      <File Name="ProjectInfo.xml" FileDate="2015-05-17, 18:31:45" FileAge="1431876705604" FileType="45637" />
-      <File Name="Generated_Code/ASerialLdd2.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664336" FileType="45637" CompNumb="71" />
-      <File Name="Generated_Code/TU2.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664509" FileType="45637" CompNumb="43" />
-      <File Name="Generated_Code/A1.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664317" FileType="45637" CompNumb="48" />
+      <File Name="Generated_Code/PWM_dreapta.c" FileDate="2015-05-15, 19:38:23" FileAge="1431707903261" FileType="45637" CompNumb="21" />
+      <File Name="Generated_Code/ASerialLdd2.c" FileDate="2015-05-15, 19:38:22" FileAge="1431707902636" FileType="45637" CompNumb="71" />
+      <File Name="Generated_Code/TU2.c" FileDate="2015-05-15, 19:38:23" FileAge="1431707903413" FileType="45637" CompNumb="43" />
+      <File Name="Generated_Code/A1.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389161" FileType="45637" CompNumb="48" />
       <File Name="Sources/Events.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664613" FileType="131328" />
-      <File Name="Generated_Code/TU1.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664506" FileType="45637" CompNumb="23" />
-      <File Name="Generated_Code/A0.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664314" FileType="45637" CompNumb="54" />
-      <File Name="Generated_Code/Button.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664409" FileType="45637" CompNumb="89" />
-      <File Name="Project_Settings/Debugger/MKL25Z128.mem" FileDate="2015-05-16, 13:04:24" FileAge="1431770664587" FileType="45637" CompNumb="2" />
-      <File Name="Documentation/doxygen/BitIoLdd5.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664086" FileType="45637" CompNumb="51" />
+      <File Name="Generated_Code/TU1.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903403" FileType="45637" CompNumb="23" />
+      <File Name="Generated_Code/A0.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389271" FileType="45637" CompNumb="54" />
+      <File Name="Generated_Code/Button.h" FileDate="2015-05-15, 19:38:22" FileAge="1431707902929" FileType="45637" CompNumb="89" />
+      <File Name="Project_Settings/Debugger/MKL25Z128.mem" FileDate="2015-05-15, 19:38:23" FileAge="1431707903516" FileType="45637" CompNumb="2" />
+      <File Name="Documentation/doxygen/BitIoLdd5.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900885" FileType="45637" CompNumb="51" />
       <File Name="Sources/Events.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664612" FileType="131328" />
       <File Name="Generated_Code/PDD/UART0_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Generated_Code/TU1.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664503" FileType="45637" CompNumb="23" />
-      <File Name="Generated_Code/A0.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664310" FileType="45637" CompNumb="54" />
-      <File Name="Generated_Code/Button.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664406" FileType="45637" CompNumb="89" />
+      <File Name="Generated_Code/TU1.c" FileDate="2015-05-15, 19:38:23" FileAge="1431707903387" FileType="45637" CompNumb="23" />
+      <File Name="Generated_Code/A0.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389279" FileType="45637" CompNumb="54" />
+      <File Name="Generated_Code/Button.c" FileDate="2015-05-15, 19:38:22" FileAge="1431707902915" FileType="45637" CompNumb="89" />
       <File Name="Generated_Code/IO_Map/MKL25Z4.h" FileDate="2013-04-18, 00:55:42" FileAge="1366235742000" FileType="262144" />
-      <File Name="Documentation/doxygen/TU2.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664124" FileType="45637" CompNumb="43" />
-      <File Name="Documentation/doxygen/ProcessorExpert.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664105" FileType="45637" CompNumb="2" />
-      <File Name="Documentation/doxygen/PullUpButton.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664108" FileType="45637" CompNumb="91" />
-      <File Name="Generated_Code/IR_LED.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664443" FileType="45637" CompNumb="75" />
-<<<<<<< HEAD
-      <File Name="Sources/ProcessorExpert.c" FileDate="2015-05-24, 14:38:10" FileAge="1432467490134" FileType="128" />
-=======
-      <File Name="Sources/ProcessorExpert.c" FileDate="2015-05-18, 12:48:59" FileAge="1431942539805" FileType="128" />
->>>>>>> parent of adba712... Almost Stable
-      <File Name="Generated_Code/IR_LED.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664440" FileType="45637" CompNumb="75" />
-      <File Name="Documentation/doxygen/BitIoLdd11.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664073" FileType="45637" CompNumb="90" />
-      <File Name="Generated_Code/CountTimer.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664416" FileType="45637" CompNumb="47" />
-      <File Name="Generated_Code/WAIT1.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664528" FileType="45637" CompNumb="9" />
-      <File Name="Generated_Code/CountTimer.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664413" FileType="45637" CompNumb="47" />
-      <File Name="Documentation/doxygen/BitIoLdd4.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664083" FileType="45637" CompNumb="49" />
-      <File Name="Generated_Code/WAIT1.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664525" FileType="45637" CompNumb="9" />
-      <File Name="Generated_Code/D11.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664428" FileType="45637" CompNumb="52" />
+      <File Name="Documentation/doxygen/TU2.txt" FileDate="2015-05-15, 19:38:21" FileAge="1431707901085" FileType="45637" CompNumb="43" />
+      <File Name="Documentation/doxygen/ProcessorExpert.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900998" FileType="45637" CompNumb="2" />
+      <File Name="Documentation/doxygen/PullUpButton.txt" FileDate="2015-05-15, 19:38:21" FileAge="1431707901013" FileType="45637" CompNumb="91" />
+      <File Name="Generated_Code/IR_LED.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389370" FileType="45637" CompNumb="75" />
+      <File Name="Sources/ProcessorExpert.c" FileDate="2015-05-25, 14:56:00" FileAge="1432554960567" FileType="128" />
+      <File Name="Generated_Code/IR_LED.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389378" FileType="45637" CompNumb="75" />
+      <File Name="Documentation/doxygen/BitIoLdd11.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900827" FileType="45637" CompNumb="90" />
+      <File Name="Generated_Code/CountTimer.h" FileDate="2015-05-15, 19:38:22" FileAge="1431707902954" FileType="45637" CompNumb="47" />
+      <File Name="Generated_Code/WAIT1.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903464" FileType="45637" CompNumb="9" />
+      <File Name="Generated_Code/CountTimer.c" FileDate="2015-05-15, 19:38:22" FileAge="1431707902940" FileType="45637" CompNumb="47" />
+      <File Name="Documentation/doxygen/BitIoLdd4.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900870" FileType="45637" CompNumb="49" />
+      <File Name="Generated_Code/WAIT1.c" FileDate="2015-05-15, 19:38:23" FileAge="1431707903449" FileType="45637" CompNumb="9" />
+      <File Name="Generated_Code/D11.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389238" FileType="45637" CompNumb="52" />
       <File Name="Generated_Code/PDD/PIT_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Generated_Code/sens_dreapta.h" FileDate="2015-05-17, 19:34:49" FileAge="1431880489037" FileType="45637" CompNumb="17" />
+      <File Name="Generated_Code/sens_dreapta.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389062" FileType="45637" CompNumb="17" />
       <File Name="Generated_Code/PDD/MCM_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Generated_Code/D11.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664425" FileType="45637" CompNumb="52" />
-      <File Name="Documentation/doxygen/BitIoLdd9.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664100" FileType="45637" CompNumb="59" />
-      <File Name="Generated_Code/sens_dreapta.c" FileDate="2015-05-17, 19:34:49" FileAge="1431880489046" FileType="45637" CompNumb="17" />
-      <File Name="Documentation/doxygen/TU1.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664121" FileType="45637" CompNumb="23" />
-      <File Name="Documentation/doxygen/ASerialLdd2.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664066" FileType="45637" CompNumb="71" />
+      <File Name="Generated_Code/D11.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389246" FileType="45637" CompNumb="52" />
+      <File Name="Documentation/doxygen/BitIoLdd9.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900943" FileType="45637" CompNumb="59" />
+      <File Name="Generated_Code/sens_dreapta.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389071" FileType="45637" CompNumb="17" />
+      <File Name="Documentation/doxygen/TU1.txt" FileDate="2015-05-15, 19:38:21" FileAge="1431707901070" FileType="45637" CompNumb="23" />
+      <File Name="Documentation/doxygen/ASerialLdd2.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900797" FileType="45637" CompNumb="71" />
       <File Name="Generated_Code/PDD/LPTMR_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Documentation/doxygen/PwmLdd2.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664115" FileType="45637" CompNumb="34" />
+      <File Name="Documentation/doxygen/PwmLdd2.txt" FileDate="2015-05-15, 19:38:21" FileAge="1431707901042" FileType="45637" CompNumb="34" />
       <File Name="Generated_Code/PDD/I2C_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Generated_Code/sens_stanga.h" FileDate="2015-05-17, 19:34:49" FileAge="1431880489071" FileType="45637" CompNumb="19" />
-      <File Name="Documentation/doxygen/BitIoLdd10.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664070" FileType="45637" CompNumb="76" />
-      <File Name="Generated_Code/BitIoLdd11.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664352" FileType="45637" CompNumb="90" />
+      <File Name="Generated_Code/sens_stanga.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389106" FileType="45637" CompNumb="19" />
+      <File Name="Documentation/doxygen/BitIoLdd10.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900812" FileType="45637" CompNumb="76" />
+      <File Name="Generated_Code/BitIoLdd11.h" FileDate="2015-05-15, 19:38:22" FileAge="1431707902701" FileType="45637" CompNumb="90" />
       <File Name="Generated_Code/PDD/RTC_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
       <File Name="Generated_Code/PDD/FTFA_PDD.h" FileDate="2014-02-20, 13:18:46" FileAge="1392895126000" FileType="262144" />
-      <File Name="Generated_Code/PE_Types.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664468" FileType="45637" />
-      <File Name="Generated_Code/sens_stanga.c" FileDate="2015-05-17, 19:34:49" FileAge="1431880489079" FileType="45637" CompNumb="19" />
-      <File Name="Generated_Code/BitIoLdd11.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664349" FileType="45637" CompNumb="90" />
-      <File Name="Generated_Code/BitIoLdd10.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664346" FileType="45637" CompNumb="76" />
-      <File Name="Documentation/doxygen/BitIoLdd3.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664080" FileType="45637" CompNumb="20" />
-      <File Name="Generated_Code/BitIoLdd10.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664343" FileType="45637" CompNumb="76" />
-      <File Name="Generated_Code/Term1.h" FileDate="2015-05-16, 13:04:24" FileAge="1431770664519" FileType="45637" CompNumb="63" />
-      <File Name="Generated_Code/Vectors.c" FileDate="2015-05-16, 13:04:24" FileAge="1431770664522" FileType="45637" CompNumb="2" />
-      <File Name="Documentation/doxygen/BitIoLdd8.txt" FileDate="2015-05-16, 13:04:24" FileAge="1431770664096" FileType="45637" CompNumb="57" />
+      <File Name="Generated_Code/PE_Types.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903176" FileType="45637" />
+      <File Name="Generated_Code/sens_stanga.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389118" FileType="45637" CompNumb="19" />
+      <File Name="Generated_Code/BitIoLdd11.c" FileDate="2015-05-15, 19:38:22" FileAge="1431707902686" FileType="45637" CompNumb="90" />
+      <File Name="Generated_Code/BitIoLdd10.h" FileDate="2015-05-25, 12:16:29" FileAge="1432545389354" FileType="45637" CompNumb="76" />
+      <File Name="Documentation/doxygen/BitIoLdd3.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900856" FileType="45637" CompNumb="20" />
+      <File Name="Generated_Code/BitIoLdd10.c" FileDate="2015-05-25, 12:16:29" FileAge="1432545389362" FileType="45637" CompNumb="76" />
+      <File Name="Generated_Code/Term1.h" FileDate="2015-05-15, 19:38:23" FileAge="1431707903377" FileType="45637" CompNumb="63" />
+      <File Name="Generated_Code/Vectors.c" FileDate="2015-05-15, 19:38:23" FileAge="1431707903437" FileType="45637" CompNumb="2" />
+      <File Name="Documentation/doxygen/BitIoLdd8.txt" FileDate="2015-05-15, 19:38:20" FileAge="1431707900928" FileType="45637" CompNumb="57" />
     </GeneratedByPE>
   </GeneratedFilesList>
-<<<<<<< HEAD
-  <CodeGenReference>80</CodeGenReference>
-=======
-  <CodeGenReference>70</CodeGenReference>
->>>>>>> parent of adba712... Almost Stable
+  <CodeGenReference>55</CodeGenReference>
 </CodeGenerationInfo>

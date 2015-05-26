@@ -26,8 +26,6 @@
 */
 /* MODULE ProcessorExpert */
 
-
-
 #include "Cpu.h"
 #include "Events.h"
 #include "WAIT1.h"
@@ -67,6 +65,8 @@
 #include "PE_Const.h"
 #include "IO_Map.h"
 #include "ZumoRobot.h"
+
+
 #define DEBUG FALSE
 
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
@@ -80,7 +80,7 @@ int main(void)
 	struct sensor s[6];
 	
 	int64_t min_avg[6]={23, 14, 15, 15, 18, 23};
-	int64_t max_avg[6]={2000, 193, 172, 170, 160, 550};
+	int64_t max_avg[6]={1000, 193, 172, 170, 160, 550};
 	int i;
 	int64_t error;
 
@@ -92,8 +92,7 @@ int main(void)
   //Initializeaza timer-ul
   CountTimer_Init((LDD_TUserData *)NULL);
   //Opreste motoarele
-  PWM_dreapta_SetRatio16(65535);
-  PWM_stanga_SetRatio16(65535);
+  motor(0, 0);
   //Activeaza PWM-ul pentru motoare
   PWM_stanga_Enable();
   PWM_dreapta_Enable();
@@ -107,7 +106,7 @@ int main(void)
   while(1){
 	  
 	  readSensors(min_avg, max_avg, s);
-	  
+	  WAIT1_Waitms(1);
 #if DEBUG==TRUE
 	  for(i=0; i<6; i++){
 		  Term1_SendNum(s[i].value);
@@ -117,9 +116,6 @@ int main(void)
 		  Term1_SendNum(s[i].seen);
 		  Term1_SendStr("  ");
 	  }
-	  Term1_SendStr("  ");
-	  Term1_SendStr("  ");
-	  Term1_SendStr("  ");
 #endif
 	  error=propder(s);
 #if DEBUG==TRUE

@@ -6,7 +6,7 @@
 **     Component   : Serial_LDD
 **     Version     : Component 01.187, Driver 01.12, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-05-15, 20:53, # CodeGen: 51
+**     Date/Time   : 2015-04-29, 22:02, # CodeGen: 39
 **     Abstract    :
 **         This component "Serial_LDD" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -121,7 +121,6 @@
 #include "ASerialLdd2.h"
 #include "Inhr1.h"
 #include "UART0_PDD.h"
-#include "SIM_PDD.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -211,7 +210,7 @@ LDD_TDeviceData* ASerialLdd2_Init(LDD_TUserData *UserDataPtr)
   UART0_C4 = UART0_C4_OSR(0x00);       /*  Set the C4 register */
   /* UART0_S2: LBKDIF=0,RXEDGIF=0,MSBF=0,RXINV=0,RWUID=0,BRK13=0,LBKDE=0,RAF=0 */
   UART0_S2 = 0x00U;                    /*  Set the S2 register */
-  SIM_PDD_SetClockSourceUART0(SIM_BASE_PTR, SIM_PDD_UART0_PLL_FLL_CLOCK);
+  UART0_PDD_SetClockSource(UART0_BASE_PTR, UART0_PDD_PLL_FLL_CLOCK);
   UART0_PDD_SetBaudRate(UART0_BASE_PTR, 273U); /* Set the baud rate register. */
   UART0_PDD_SetOversamplingRatio(UART0_BASE_PTR, 3U);
   UART0_PDD_EnableSamplingOnBothEdges(UART0_BASE_PTR, PDD_ENABLE);
@@ -412,7 +411,7 @@ PE_ISR(ASerialLdd2_Interrupt)
 {
   /* {Default RTOS Adapter} ISR parameter is passed through the global variable */
   ASerialLdd2_TDeviceDataPtr DeviceDataPrv = INT_UART0__DEFAULT_RTOS_ISRPARAM;
-  register uint32_t StatReg = UART0_PDD_ReadInterruptStatusReg(UART0_BASE_PTR); /* Read status register */
+  register uint16_t StatReg = UART0_PDD_ReadInterruptStatusReg(UART0_BASE_PTR); /* Read status register */
   register uint16_t OnErrorFlags = 0U; /* Temporary variable for flags */
   register uint8_t  OnBreakFlag = 0U;  /* Temporary variable flag for OnBreak event */
   register uint16_t Data;              /* Temporary variable for data */
@@ -438,7 +437,7 @@ PE_ISR(ASerialLdd2_Interrupt)
       OnErrorFlags |= LDD_SERIAL_NOISE_ERROR; /* If yes then set the flag */
     }
     DeviceDataPrv->ErrFlag |= OnErrorFlags; /* Copy flags status to ErrFlag status variable */
-    StatReg &= (uint32_t)(~(uint32_t)UART0_S1_RDRF_MASK); /* Clear the receive data flag to discard the errorneous data */
+    StatReg &= (uint16_t)(~(uint16_t)UART0_S1_RDRF_MASK); /* Clear the receive data flag to discard the errorneous data */
     if (OnBreakFlag != 0U) {
       ASerialLdd2_OnBreak(DeviceDataPrv->UserDataPtr); /* If yes then invoke user event */
     } else {

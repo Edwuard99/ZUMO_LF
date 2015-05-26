@@ -41,7 +41,7 @@ int propder(struct sensor s[6]){
 	int64_t error=0;
 	/*** kd - cat participa componenta derivativa la eroare            ***/
 	/*** kp - cat participa componenta proportionala la eroare         ***/
-	const float kd=10,kp=3;
+	const float kd=5,kp=3;
 
 	/*** s[i].dist - distantele fata de centru                         ***/
 	s[0].dist=-500;

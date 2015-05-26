@@ -4,9 +4,9 @@
 **     Project     : ProcessorExpert
 **     Processor   : MKL25Z128VLK4
 **     Component   : PWM
-**     Version     : Component 02.241, Driver 01.01, CPU db: 3.00.000
+**     Version     : Component 02.240, Driver 01.01, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-05-15, 20:53, # CodeGen: 51
+**     Date/Time   : 2015-05-06, 12:06, # CodeGen: 43
 **     Abstract    :
 **         This component implements a pulse-width modulation generator
 **         that generates signal with variable duty and fixed cycle. 

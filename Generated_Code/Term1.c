@@ -6,18 +6,17 @@
 **     Component   : Term
 **     Version     : Component 02.061, Driver 03.22, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2015-05-15, 20:27, # CodeGen: 50
+**     Date/Time   : 2015-04-29, 22:02, # CodeGen: 39
 **     Abstract    :
 **This components generates low-level console IO routines for selected UART.
 **     Settings    :
 **
 **     Contents    :
-**         CRLF         - void Term1_CRLF(void);
-**         SendStr      - void Term1_SendStr(uint8_t *str);
-**         SendNum      - void Term1_SendNum(int32_t number);
-**         SendFloatNum - byte Term1_SendFloatNum(TPE_Float number);
-**         SendChar     - void Term1_SendChar(char_t Val);
-**         MoveTo       - void Term1_MoveTo(uint8_t x, uint8_t y);
+**         CRLF     - void Term1_CRLF(void);
+**         SendStr  - void Term1_SendStr(uint8_t *str);
+**         SendNum  - void Term1_SendNum(int32_t number);
+**         SendChar - void Term1_SendChar(char_t Val);
+**         MoveTo   - void Term1_MoveTo(uint8_t x, uint8_t y);
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -73,7 +72,6 @@
 /* Internal method prototypes */
 static void SendESCPrefix(void);
 static void LongToStr(char_t* s, int32_t n);
-static byte FloatToStr(char_t* s, TPE_Float n);
 
 /*
 ** ===================================================================
@@ -202,110 +200,6 @@ void Term1_SendNum(int32_t number)
     while (Inhr1_SendChar((Inhr1_TComData)str[i]) == ERR_TXFULL){} /* Send char */
     i++;                               /* Increase the variable */
   }
-}
-
-/*
-** ===================================================================
-**     Method      :  Term1_FloatToStr (component Term)
-**
-**     Description :
-**         The method converts float number to string.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-static byte FloatToStr(char_t* s, TPE_Float n)
-{
-  char_t tmp;
-  uint8_t i=4U, j;
-  bool sign = (bool)((n < 0.0F) ? TRUE : FALSE);
-  uint32_t Integral;
-  uint16_t fract;
-  TPE_Float tmp_f;
-  uint8_t Tmp;
-
-  if (sign){
-    n *= -1.0F;
-  }
-  if (n > 4294967295.0F) {
-    return ERR_RANGE;
-  }
-  Integral = (uint32_t)n;
-  tmp_f = (n-(TPE_Float)Integral)*10000.0F;
-  fract = (uint16_t)tmp_f;
-  for(j=0U; j<4U; j++) {
-    Tmp = (uint8_t)((fract % 10U) + 0x30U);
-    s[j] = (char_t)(Tmp);
-    fract /= 10U;
-  }
-  s[i++] = '.';
-  if (i > 14U) {
-    return ERR_RANGE;
-  }
-  if (Integral == 0U){
-    s[i++] = '0';
-    if (i > 14U) {
-      return ERR_RANGE;
-    }
-  }
-  while (Integral > 0U) {
-    Tmp = (uint8_t)((Integral % 10U) + 0x30U);
-    s[i++] = (char_t)(Tmp);
-    if (i > 14U) {
-      return ERR_RANGE;
-    }
-    Integral /= 10U;
-  }
-  if (sign){
-    s[i++] = '-';
-    if (i > 14U) {
-      return ERR_RANGE;
-    }
-  }
-  for(j=0U; j<(i/2U); j++) {
-    tmp = s[j];
-    s[j] = s[(i-j)-1U];
-    s[(i-j)-1U] = tmp;
-  }
-  s[i] = '\0';
-  return ERR_OK;
-}
-
-/*
-** ===================================================================
-**     Method      :  Term1_SendFloatNum (component Term)
-**     Description :
-**         Send a float number to the terminal. Due to the
-**         transformations the maximum float number is limited
-**         according to the following conditions: 
-**         - positive number: 9 digits for integer part with 4 digits
-**         for fractional part. 
-**         - negative numbers: 8 digits for integer part with 4 digits
-**         for fractional part.
-**     Parameters  :
-**         NAME            - DESCRIPTION
-**         number          - Float variable
-**     Returns     :
-**         ---             - Error code, possible codes:
-**                           ERR_OK - OK
-**                           ERR_RANGE - Float number exceeds maximal
-**                           number limitation.
-** ===================================================================
-*/
-byte Term1_SendFloatNum(TPE_Float number)
-{
-  char_t str[15];
-  uint8_t i=0U;
-  byte err;
-
-  err = FloatToStr(str, number);       /* Conversion number to the string */
-  if (err == ERR_RANGE) {
-    return ERR_RANGE;
-  }
-  while (str[i] != '\0') {
-    while (Inhr1_SendChar((Inhr1_TComData)str[i]) == ERR_TXFULL){} /* Send char */
-    i++;                               /* Increase the variable */
-  }
-  return(err);
 }
 
 /*
